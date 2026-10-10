@@ -1,0 +1,1407 @@
+{
+  "generatedAt": "2026-10-10T11:06:55.311Z",
+  "fileCount": 200,
+  "bytes": 11851551,
+  "files": [
+    {
+      "slug": "brand-mockups",
+      "width": 1280,
+      "format": "avif",
+      "bytes": 65567,
+      "src": "/media/advert/brand-mockups-1280.avif"
+    },
+    {
+      "slug": "brand-mockups",
+      "width": 1280,
+      "format": "webp",
+      "bytes": 122516,
+      "src": "/media/advert/brand-mockups-1280.webp"
+    },
+    {
+      "slug": "brand-mockups",
+      "width": 1536,
+      "format": "avif",
+      "bytes": 83918,
+      "src": "/media/advert/brand-mockups-1536.avif"
+    },
+    {
+      "slug": "brand-mockups",
+      "width": 1536,
+      "format": "webp",
+      "bytes": 159870,
+      "src": "/media/advert/brand-mockups-1536.webp"
+    },
+    {
+      "slug": "brand-mockups",
+      "width": 640,
+      "format": "avif",
+      "bytes": 22439,
+      "src": "/media/advert/brand-mockups-640.avif"
+    },
+    {
+      "slug": "brand-mockups",
+      "width": 640,
+      "format": "webp",
+      "bytes": 43840,
+      "src": "/media/advert/brand-mockups-640.webp"
+    },
+    {
+      "slug": "brand-mockups",
+      "width": 960,
+      "format": "avif",
+      "bytes": 43018,
+      "src": "/media/advert/brand-mockups-960.avif"
+    },
+    {
+      "slug": "brand-mockups",
+      "width": 960,
+      "format": "webp",
+      "bytes": 80272,
+      "src": "/media/advert/brand-mockups-960.webp"
+    },
+    {
+      "slug": "facade-signage",
+      "width": 1280,
+      "format": "avif",
+      "bytes": 65875,
+      "src": "/media/advert/facade-signage-1280.avif"
+    },
+    {
+      "slug": "facade-signage",
+      "width": 1280,
+      "format": "webp",
+      "bytes": 140818,
+      "src": "/media/advert/facade-signage-1280.webp"
+    },
+    {
+      "slug": "facade-signage",
+      "width": 1668,
+      "format": "avif",
+      "bytes": 100387,
+      "src": "/media/advert/facade-signage-1668.avif"
+    },
+    {
+      "slug": "facade-signage",
+      "width": 1668,
+      "format": "webp",
+      "bytes": 211182,
+      "src": "/media/advert/facade-signage-1668.webp"
+    },
+    {
+      "slug": "facade-signage",
+      "width": 640,
+      "format": "avif",
+      "bytes": 22114,
+      "src": "/media/advert/facade-signage-640.avif"
+    },
+    {
+      "slug": "facade-signage",
+      "width": 640,
+      "format": "webp",
+      "bytes": 45330,
+      "src": "/media/advert/facade-signage-640.webp"
+    },
+    {
+      "slug": "facade-signage",
+      "width": 960,
+      "format": "avif",
+      "bytes": 41852,
+      "src": "/media/advert/facade-signage-960.avif"
+    },
+    {
+      "slug": "facade-signage",
+      "width": 960,
+      "format": "webp",
+      "bytes": 86896,
+      "src": "/media/advert/facade-signage-960.webp"
+    },
+    {
+      "slug": "lockup-dark",
+      "width": 1280,
+      "format": "avif",
+      "bytes": 10511,
+      "src": "/media/logos/lockup-dark-1280.avif"
+    },
+    {
+      "slug": "lockup-dark",
+      "width": 1280,
+      "format": "webp",
+      "bytes": 17060,
+      "src": "/media/logos/lockup-dark-1280.webp"
+    },
+    {
+      "slug": "lockup-dark",
+      "width": 1774,
+      "format": "avif",
+      "bytes": 15364,
+      "src": "/media/logos/lockup-dark-1774.avif"
+    },
+    {
+      "slug": "lockup-dark",
+      "width": 1774,
+      "format": "webp",
+      "bytes": 24000,
+      "src": "/media/logos/lockup-dark-1774.webp"
+    },
+    {
+      "slug": "lockup-dark",
+      "width": 640,
+      "format": "avif",
+      "bytes": 5176,
+      "src": "/media/logos/lockup-dark-640.avif"
+    },
+    {
+      "slug": "lockup-dark",
+      "width": 640,
+      "format": "webp",
+      "bytes": 8234,
+      "src": "/media/logos/lockup-dark-640.webp"
+    },
+    {
+      "slug": "lockup-dark",
+      "width": 960,
+      "format": "avif",
+      "bytes": 7594,
+      "src": "/media/logos/lockup-dark-960.avif"
+    },
+    {
+      "slug": "lockup-dark",
+      "width": 960,
+      "format": "webp",
+      "bytes": 12352,
+      "src": "/media/logos/lockup-dark-960.webp"
+    },
+    {
+      "slug": "lockup-light",
+      "width": 1280,
+      "format": "avif",
+      "bytes": 11354,
+      "src": "/media/logos/lockup-light-1280.avif"
+    },
+    {
+      "slug": "lockup-light",
+      "width": 1280,
+      "format": "webp",
+      "bytes": 18754,
+      "src": "/media/logos/lockup-light-1280.webp"
+    },
+    {
+      "slug": "lockup-light",
+      "width": 1774,
+      "format": "avif",
+      "bytes": 16758,
+      "src": "/media/logos/lockup-light-1774.avif"
+    },
+    {
+      "slug": "lockup-light",
+      "width": 1774,
+      "format": "webp",
+      "bytes": 26766,
+      "src": "/media/logos/lockup-light-1774.webp"
+    },
+    {
+      "slug": "lockup-light",
+      "width": 640,
+      "format": "avif",
+      "bytes": 5392,
+      "src": "/media/logos/lockup-light-640.avif"
+    },
+    {
+      "slug": "lockup-light",
+      "width": 640,
+      "format": "webp",
+      "bytes": 8930,
+      "src": "/media/logos/lockup-light-640.webp"
+    },
+    {
+      "slug": "lockup-light",
+      "width": 960,
+      "format": "avif",
+      "bytes": 7976,
+      "src": "/media/logos/lockup-light-960.avif"
+    },
+    {
+      "slug": "lockup-light",
+      "width": 960,
+      "format": "webp",
+      "bytes": 13594,
+      "src": "/media/logos/lockup-light-960.webp"
+    },
+    {
+      "slug": "mark",
+      "width": 1254,
+      "format": "avif",
+      "bytes": 21768,
+      "src": "/media/logos/mark-1254.avif"
+    },
+    {
+      "slug": "mark",
+      "width": 1254,
+      "format": "webp",
+      "bytes": 55174,
+      "src": "/media/logos/mark-1254.webp"
+    },
+    {
+      "slug": "mark",
+      "width": 480,
+      "format": "avif",
+      "bytes": 7581,
+      "src": "/media/logos/mark-480.avif"
+    },
+    {
+      "slug": "mark",
+      "width": 480,
+      "format": "webp",
+      "bytes": 17456,
+      "src": "/media/logos/mark-480.webp"
+    },
+    {
+      "slug": "mark",
+      "width": 720,
+      "format": "avif",
+      "bytes": 11710,
+      "src": "/media/logos/mark-720.avif"
+    },
+    {
+      "slug": "mark",
+      "width": 720,
+      "format": "webp",
+      "bytes": 28810,
+      "src": "/media/logos/mark-720.webp"
+    },
+    {
+      "slug": "wordmark",
+      "width": 1280,
+      "format": "avif",
+      "bytes": 14457,
+      "src": "/media/logos/wordmark-1280.avif"
+    },
+    {
+      "slug": "wordmark",
+      "width": 1280,
+      "format": "webp",
+      "bytes": 35606,
+      "src": "/media/logos/wordmark-1280.webp"
+    },
+    {
+      "slug": "wordmark",
+      "width": 2172,
+      "format": "avif",
+      "bytes": 26487,
+      "src": "/media/logos/wordmark-2172.avif"
+    },
+    {
+      "slug": "wordmark",
+      "width": 2172,
+      "format": "webp",
+      "bytes": 69438,
+      "src": "/media/logos/wordmark-2172.webp"
+    },
+    {
+      "slug": "wordmark",
+      "width": 640,
+      "format": "avif",
+      "bytes": 7854,
+      "src": "/media/logos/wordmark-640.avif"
+    },
+    {
+      "slug": "wordmark",
+      "width": 640,
+      "format": "webp",
+      "bytes": 15678,
+      "src": "/media/logos/wordmark-640.webp"
+    },
+    {
+      "slug": "wordmark",
+      "width": 960,
+      "format": "avif",
+      "bytes": 11393,
+      "src": "/media/logos/wordmark-960.avif"
+    },
+    {
+      "slug": "wordmark",
+      "width": 960,
+      "format": "webp",
+      "bytes": 25760,
+      "src": "/media/logos/wordmark-960.webp"
+    },
+    {
+      "slug": "complex-arrow",
+      "width": 1280,
+      "format": "avif",
+      "bytes": 77081,
+      "src": "/media/photos/complex-arrow-1280.avif"
+    },
+    {
+      "slug": "complex-arrow",
+      "width": 1280,
+      "format": "webp",
+      "bytes": 149446,
+      "src": "/media/photos/complex-arrow-1280.webp"
+    },
+    {
+      "slug": "complex-arrow",
+      "width": 1672,
+      "format": "avif",
+      "bytes": 112139,
+      "src": "/media/photos/complex-arrow-1672.avif"
+    },
+    {
+      "slug": "complex-arrow",
+      "width": 1672,
+      "format": "webp",
+      "bytes": 214944,
+      "src": "/media/photos/complex-arrow-1672.webp"
+    },
+    {
+      "slug": "complex-arrow",
+      "width": 640,
+      "format": "avif",
+      "bytes": 25191,
+      "src": "/media/photos/complex-arrow-640.avif"
+    },
+    {
+      "slug": "complex-arrow",
+      "width": 640,
+      "format": "webp",
+      "bytes": 48100,
+      "src": "/media/photos/complex-arrow-640.webp"
+    },
+    {
+      "slug": "complex-arrow",
+      "width": 960,
+      "format": "avif",
+      "bytes": 50365,
+      "src": "/media/photos/complex-arrow-960.avif"
+    },
+    {
+      "slug": "complex-arrow",
+      "width": 960,
+      "format": "webp",
+      "bytes": 96250,
+      "src": "/media/photos/complex-arrow-960.webp"
+    },
+    {
+      "slug": "corridor-254",
+      "width": 1280,
+      "format": "avif",
+      "bytes": 32914,
+      "src": "/media/photos/corridor-254-1280.avif"
+    },
+    {
+      "slug": "corridor-254",
+      "width": 1280,
+      "format": "webp",
+      "bytes": 50132,
+      "src": "/media/photos/corridor-254-1280.webp"
+    },
+    {
+      "slug": "corridor-254",
+      "width": 1672,
+      "format": "avif",
+      "bytes": 46624,
+      "src": "/media/photos/corridor-254-1672.avif"
+    },
+    {
+      "slug": "corridor-254",
+      "width": 1672,
+      "format": "webp",
+      "bytes": 71512,
+      "src": "/media/photos/corridor-254-1672.webp"
+    },
+    {
+      "slug": "corridor-254",
+      "width": 640,
+      "format": "avif",
+      "bytes": 12742,
+      "src": "/media/photos/corridor-254-640.avif"
+    },
+    {
+      "slug": "corridor-254",
+      "width": 640,
+      "format": "webp",
+      "bytes": 19660,
+      "src": "/media/photos/corridor-254-640.webp"
+    },
+    {
+      "slug": "corridor-254",
+      "width": 960,
+      "format": "avif",
+      "bytes": 22191,
+      "src": "/media/photos/corridor-254-960.avif"
+    },
+    {
+      "slug": "corridor-254",
+      "width": 960,
+      "format": "webp",
+      "bytes": 34516,
+      "src": "/media/photos/corridor-254-960.webp"
+    },
+    {
+      "slug": "corridor-marble",
+      "width": 480,
+      "format": "avif",
+      "bytes": 20253,
+      "src": "/media/photos/corridor-marble-480.avif"
+    },
+    {
+      "slug": "corridor-marble",
+      "width": 480,
+      "format": "webp",
+      "bytes": 31128,
+      "src": "/media/photos/corridor-marble-480.webp"
+    },
+    {
+      "slug": "corridor-marble",
+      "width": 720,
+      "format": "avif",
+      "bytes": 35469,
+      "src": "/media/photos/corridor-marble-720.avif"
+    },
+    {
+      "slug": "corridor-marble",
+      "width": 720,
+      "format": "webp",
+      "bytes": 54110,
+      "src": "/media/photos/corridor-marble-720.webp"
+    },
+    {
+      "slug": "corridor-marble",
+      "width": 941,
+      "format": "avif",
+      "bytes": 50532,
+      "src": "/media/photos/corridor-marble-941.avif"
+    },
+    {
+      "slug": "corridor-marble",
+      "width": 941,
+      "format": "webp",
+      "bytes": 78814,
+      "src": "/media/photos/corridor-marble-941.webp"
+    },
+    {
+      "slug": "facade-arches-caption",
+      "width": 1280,
+      "format": "avif",
+      "bytes": 66785,
+      "src": "/media/photos/facade-arches-caption-1280.avif"
+    },
+    {
+      "slug": "facade-arches-caption",
+      "width": 1280,
+      "format": "webp",
+      "bytes": 133192,
+      "src": "/media/photos/facade-arches-caption-1280.webp"
+    },
+    {
+      "slug": "facade-arches-caption",
+      "width": 1673,
+      "format": "avif",
+      "bytes": 92444,
+      "src": "/media/photos/facade-arches-caption-1673.avif"
+    },
+    {
+      "slug": "facade-arches-caption",
+      "width": 1673,
+      "format": "webp",
+      "bytes": 184722,
+      "src": "/media/photos/facade-arches-caption-1673.webp"
+    },
+    {
+      "slug": "facade-arches-caption",
+      "width": 640,
+      "format": "avif",
+      "bytes": 26695,
+      "src": "/media/photos/facade-arches-caption-640.avif"
+    },
+    {
+      "slug": "facade-arches-caption",
+      "width": 640,
+      "format": "webp",
+      "bytes": 53092,
+      "src": "/media/photos/facade-arches-caption-640.webp"
+    },
+    {
+      "slug": "facade-arches-caption",
+      "width": 960,
+      "format": "avif",
+      "bytes": 46568,
+      "src": "/media/photos/facade-arches-caption-960.avif"
+    },
+    {
+      "slug": "facade-arches-caption",
+      "width": 960,
+      "format": "webp",
+      "bytes": 92674,
+      "src": "/media/photos/facade-arches-caption-960.webp"
+    },
+    {
+      "slug": "facade-promenade",
+      "width": 1280,
+      "format": "avif",
+      "bytes": 73364,
+      "src": "/media/photos/facade-promenade-1280.avif"
+    },
+    {
+      "slug": "facade-promenade",
+      "width": 1280,
+      "format": "webp",
+      "bytes": 129592,
+      "src": "/media/photos/facade-promenade-1280.webp"
+    },
+    {
+      "slug": "facade-promenade",
+      "width": 1672,
+      "format": "avif",
+      "bytes": 104127,
+      "src": "/media/photos/facade-promenade-1672.avif"
+    },
+    {
+      "slug": "facade-promenade",
+      "width": 1672,
+      "format": "webp",
+      "bytes": 177400,
+      "src": "/media/photos/facade-promenade-1672.webp"
+    },
+    {
+      "slug": "facade-promenade",
+      "width": 640,
+      "format": "avif",
+      "bytes": 24766,
+      "src": "/media/photos/facade-promenade-640.avif"
+    },
+    {
+      "slug": "facade-promenade",
+      "width": 640,
+      "format": "webp",
+      "bytes": 45960,
+      "src": "/media/photos/facade-promenade-640.webp"
+    },
+    {
+      "slug": "facade-promenade",
+      "width": 960,
+      "format": "avif",
+      "bytes": 48152,
+      "src": "/media/photos/facade-promenade-960.avif"
+    },
+    {
+      "slug": "facade-promenade",
+      "width": 960,
+      "format": "webp",
+      "bytes": 88128,
+      "src": "/media/photos/facade-promenade-960.webp"
+    },
+    {
+      "slug": "facade-stairs",
+      "width": 480,
+      "format": "avif",
+      "bytes": 40488,
+      "src": "/media/photos/facade-stairs-480.avif"
+    },
+    {
+      "slug": "facade-stairs",
+      "width": 480,
+      "format": "webp",
+      "bytes": 77136,
+      "src": "/media/photos/facade-stairs-480.webp"
+    },
+    {
+      "slug": "facade-stairs",
+      "width": 720,
+      "format": "avif",
+      "bytes": 74005,
+      "src": "/media/photos/facade-stairs-720.avif"
+    },
+    {
+      "slug": "facade-stairs",
+      "width": 720,
+      "format": "webp",
+      "bytes": 147778,
+      "src": "/media/photos/facade-stairs-720.webp"
+    },
+    {
+      "slug": "facade-stairs",
+      "width": 941,
+      "format": "avif",
+      "bytes": 109330,
+      "src": "/media/photos/facade-stairs-941.avif"
+    },
+    {
+      "slug": "facade-stairs",
+      "width": 941,
+      "format": "webp",
+      "bytes": 220598,
+      "src": "/media/photos/facade-stairs-941.webp"
+    },
+    {
+      "slug": "glass-partition",
+      "width": 1280,
+      "format": "avif",
+      "bytes": 34582,
+      "src": "/media/photos/glass-partition-1280.avif"
+    },
+    {
+      "slug": "glass-partition",
+      "width": 1280,
+      "format": "webp",
+      "bytes": 60076,
+      "src": "/media/photos/glass-partition-1280.webp"
+    },
+    {
+      "slug": "glass-partition",
+      "width": 1672,
+      "format": "avif",
+      "bytes": 51153,
+      "src": "/media/photos/glass-partition-1672.avif"
+    },
+    {
+      "slug": "glass-partition",
+      "width": 1672,
+      "format": "webp",
+      "bytes": 85636,
+      "src": "/media/photos/glass-partition-1672.webp"
+    },
+    {
+      "slug": "glass-partition",
+      "width": 640,
+      "format": "avif",
+      "bytes": 12470,
+      "src": "/media/photos/glass-partition-640.avif"
+    },
+    {
+      "slug": "glass-partition",
+      "width": 640,
+      "format": "webp",
+      "bytes": 22270,
+      "src": "/media/photos/glass-partition-640.webp"
+    },
+    {
+      "slug": "glass-partition",
+      "width": 960,
+      "format": "avif",
+      "bytes": 23125,
+      "src": "/media/photos/glass-partition-960.avif"
+    },
+    {
+      "slug": "glass-partition",
+      "width": 960,
+      "format": "webp",
+      "bytes": 39860,
+      "src": "/media/photos/glass-partition-960.webp"
+    },
+    {
+      "slug": "hall-back-wall",
+      "width": 480,
+      "format": "avif",
+      "bytes": 20403,
+      "src": "/media/photos/hall-back-wall-480.avif"
+    },
+    {
+      "slug": "hall-back-wall",
+      "width": 480,
+      "format": "webp",
+      "bytes": 32998,
+      "src": "/media/photos/hall-back-wall-480.webp"
+    },
+    {
+      "slug": "hall-back-wall",
+      "width": 720,
+      "format": "avif",
+      "bytes": 39382,
+      "src": "/media/photos/hall-back-wall-720.avif"
+    },
+    {
+      "slug": "hall-back-wall",
+      "width": 720,
+      "format": "webp",
+      "bytes": 61266,
+      "src": "/media/photos/hall-back-wall-720.webp"
+    },
+    {
+      "slug": "hall-back-wall",
+      "width": 941,
+      "format": "avif",
+      "bytes": 59166,
+      "src": "/media/photos/hall-back-wall-941.avif"
+    },
+    {
+      "slug": "hall-back-wall",
+      "width": 941,
+      "format": "webp",
+      "bytes": 89048,
+      "src": "/media/photos/hall-back-wall-941.webp"
+    },
+    {
+      "slug": "hall-length-ceiling",
+      "width": 1280,
+      "format": "avif",
+      "bytes": 36619,
+      "src": "/media/photos/hall-length-ceiling-1280.avif"
+    },
+    {
+      "slug": "hall-length-ceiling",
+      "width": 1280,
+      "format": "webp",
+      "bytes": 55708,
+      "src": "/media/photos/hall-length-ceiling-1280.webp"
+    },
+    {
+      "slug": "hall-length-ceiling",
+      "width": 1672,
+      "format": "avif",
+      "bytes": 52670,
+      "src": "/media/photos/hall-length-ceiling-1672.avif"
+    },
+    {
+      "slug": "hall-length-ceiling",
+      "width": 1672,
+      "format": "webp",
+      "bytes": 78908,
+      "src": "/media/photos/hall-length-ceiling-1672.webp"
+    },
+    {
+      "slug": "hall-length-ceiling",
+      "width": 640,
+      "format": "avif",
+      "bytes": 13483,
+      "src": "/media/photos/hall-length-ceiling-640.avif"
+    },
+    {
+      "slug": "hall-length-ceiling",
+      "width": 640,
+      "format": "webp",
+      "bytes": 21700,
+      "src": "/media/photos/hall-length-ceiling-640.webp"
+    },
+    {
+      "slug": "hall-length-ceiling",
+      "width": 960,
+      "format": "avif",
+      "bytes": 23896,
+      "src": "/media/photos/hall-length-ceiling-960.avif"
+    },
+    {
+      "slug": "hall-length-ceiling",
+      "width": 960,
+      "format": "webp",
+      "bytes": 38714,
+      "src": "/media/photos/hall-length-ceiling-960.webp"
+    },
+    {
+      "slug": "hall-materials",
+      "width": 480,
+      "format": "avif",
+      "bytes": 24123,
+      "src": "/media/photos/hall-materials-480.avif"
+    },
+    {
+      "slug": "hall-materials",
+      "width": 480,
+      "format": "webp",
+      "bytes": 43236,
+      "src": "/media/photos/hall-materials-480.webp"
+    },
+    {
+      "slug": "hall-materials",
+      "width": 720,
+      "format": "avif",
+      "bytes": 43725,
+      "src": "/media/photos/hall-materials-720.avif"
+    },
+    {
+      "slug": "hall-materials",
+      "width": 720,
+      "format": "webp",
+      "bytes": 75990,
+      "src": "/media/photos/hall-materials-720.webp"
+    },
+    {
+      "slug": "hall-materials",
+      "width": 941,
+      "format": "avif",
+      "bytes": 63243,
+      "src": "/media/photos/hall-materials-941.avif"
+    },
+    {
+      "slug": "hall-materials",
+      "width": 941,
+      "format": "webp",
+      "bytes": 109078,
+      "src": "/media/photos/hall-materials-941.webp"
+    },
+    {
+      "slug": "hall-towards-windows",
+      "width": 1280,
+      "format": "avif",
+      "bytes": 43467,
+      "src": "/media/photos/hall-towards-windows-1280.avif"
+    },
+    {
+      "slug": "hall-towards-windows",
+      "width": 1280,
+      "format": "webp",
+      "bytes": 77832,
+      "src": "/media/photos/hall-towards-windows-1280.webp"
+    },
+    {
+      "slug": "hall-towards-windows",
+      "width": 1672,
+      "format": "avif",
+      "bytes": 63272,
+      "src": "/media/photos/hall-towards-windows-1672.avif"
+    },
+    {
+      "slug": "hall-towards-windows",
+      "width": 1672,
+      "format": "webp",
+      "bytes": 109522,
+      "src": "/media/photos/hall-towards-windows-1672.webp"
+    },
+    {
+      "slug": "hall-towards-windows",
+      "width": 640,
+      "format": "avif",
+      "bytes": 15827,
+      "src": "/media/photos/hall-towards-windows-640.avif"
+    },
+    {
+      "slug": "hall-towards-windows",
+      "width": 640,
+      "format": "webp",
+      "bytes": 28814,
+      "src": "/media/photos/hall-towards-windows-640.webp"
+    },
+    {
+      "slug": "hall-towards-windows",
+      "width": 960,
+      "format": "avif",
+      "bytes": 28444,
+      "src": "/media/photos/hall-towards-windows-960.avif"
+    },
+    {
+      "slug": "hall-towards-windows",
+      "width": 960,
+      "format": "webp",
+      "bytes": 52078,
+      "src": "/media/photos/hall-towards-windows-960.webp"
+    },
+    {
+      "slug": "hall-windows-portrait",
+      "width": 480,
+      "format": "avif",
+      "bytes": 19968,
+      "src": "/media/photos/hall-windows-portrait-480.avif"
+    },
+    {
+      "slug": "hall-windows-portrait",
+      "width": 480,
+      "format": "webp",
+      "bytes": 34152,
+      "src": "/media/photos/hall-windows-portrait-480.webp"
+    },
+    {
+      "slug": "hall-windows-portrait",
+      "width": 720,
+      "format": "avif",
+      "bytes": 36875,
+      "src": "/media/photos/hall-windows-portrait-720.avif"
+    },
+    {
+      "slug": "hall-windows-portrait",
+      "width": 720,
+      "format": "webp",
+      "bytes": 64446,
+      "src": "/media/photos/hall-windows-portrait-720.webp"
+    },
+    {
+      "slug": "hall-windows-portrait",
+      "width": 941,
+      "format": "avif",
+      "bytes": 57791,
+      "src": "/media/photos/hall-windows-portrait-941.avif"
+    },
+    {
+      "slug": "hall-windows-portrait",
+      "width": 941,
+      "format": "webp",
+      "bytes": 96514,
+      "src": "/media/photos/hall-windows-portrait-941.webp"
+    },
+    {
+      "slug": "hall-windows-side",
+      "width": 480,
+      "format": "avif",
+      "bytes": 20975,
+      "src": "/media/photos/hall-windows-side-480.avif"
+    },
+    {
+      "slug": "hall-windows-side",
+      "width": 480,
+      "format": "webp",
+      "bytes": 37914,
+      "src": "/media/photos/hall-windows-side-480.webp"
+    },
+    {
+      "slug": "hall-windows-side",
+      "width": 720,
+      "format": "avif",
+      "bytes": 40353,
+      "src": "/media/photos/hall-windows-side-720.avif"
+    },
+    {
+      "slug": "hall-windows-side",
+      "width": 720,
+      "format": "webp",
+      "bytes": 71106,
+      "src": "/media/photos/hall-windows-side-720.webp"
+    },
+    {
+      "slug": "hall-windows-side",
+      "width": 941,
+      "format": "avif",
+      "bytes": 61097,
+      "src": "/media/photos/hall-windows-side-941.avif"
+    },
+    {
+      "slug": "hall-windows-side",
+      "width": 941,
+      "format": "webp",
+      "bytes": 103238,
+      "src": "/media/photos/hall-windows-side-941.webp"
+    },
+    {
+      "slug": "hall-windows-sunset",
+      "width": 1280,
+      "format": "avif",
+      "bytes": 41528,
+      "src": "/media/photos/hall-windows-sunset-1280.avif"
+    },
+    {
+      "slug": "hall-windows-sunset",
+      "width": 1280,
+      "format": "webp",
+      "bytes": 68966,
+      "src": "/media/photos/hall-windows-sunset-1280.webp"
+    },
+    {
+      "slug": "hall-windows-sunset",
+      "width": 1672,
+      "format": "avif",
+      "bytes": 60895,
+      "src": "/media/photos/hall-windows-sunset-1672.avif"
+    },
+    {
+      "slug": "hall-windows-sunset",
+      "width": 1672,
+      "format": "webp",
+      "bytes": 96518,
+      "src": "/media/photos/hall-windows-sunset-1672.webp"
+    },
+    {
+      "slug": "hall-windows-sunset",
+      "width": 640,
+      "format": "avif",
+      "bytes": 14516,
+      "src": "/media/photos/hall-windows-sunset-640.avif"
+    },
+    {
+      "slug": "hall-windows-sunset",
+      "width": 640,
+      "format": "webp",
+      "bytes": 25946,
+      "src": "/media/photos/hall-windows-sunset-640.webp"
+    },
+    {
+      "slug": "hall-windows-sunset",
+      "width": 960,
+      "format": "avif",
+      "bytes": 26876,
+      "src": "/media/photos/hall-windows-sunset-960.avif"
+    },
+    {
+      "slug": "hall-windows-sunset",
+      "width": 960,
+      "format": "webp",
+      "bytes": 46118,
+      "src": "/media/photos/hall-windows-sunset-960.webp"
+    },
+    {
+      "slug": "hall-windows-wide",
+      "width": 1280,
+      "format": "avif",
+      "bytes": 34082,
+      "src": "/media/photos/hall-windows-wide-1280.avif"
+    },
+    {
+      "slug": "hall-windows-wide",
+      "width": 1280,
+      "format": "webp",
+      "bytes": 58854,
+      "src": "/media/photos/hall-windows-wide-1280.webp"
+    },
+    {
+      "slug": "hall-windows-wide",
+      "width": 1672,
+      "format": "avif",
+      "bytes": 52420,
+      "src": "/media/photos/hall-windows-wide-1672.avif"
+    },
+    {
+      "slug": "hall-windows-wide",
+      "width": 1672,
+      "format": "webp",
+      "bytes": 86472,
+      "src": "/media/photos/hall-windows-wide-1672.webp"
+    },
+    {
+      "slug": "hall-windows-wide",
+      "width": 640,
+      "format": "avif",
+      "bytes": 12036,
+      "src": "/media/photos/hall-windows-wide-640.avif"
+    },
+    {
+      "slug": "hall-windows-wide",
+      "width": 640,
+      "format": "webp",
+      "bytes": 20342,
+      "src": "/media/photos/hall-windows-wide-640.webp"
+    },
+    {
+      "slug": "hall-windows-wide",
+      "width": 960,
+      "format": "avif",
+      "bytes": 21462,
+      "src": "/media/photos/hall-windows-wide-960.avif"
+    },
+    {
+      "slug": "hall-windows-wide",
+      "width": 960,
+      "format": "webp",
+      "bytes": 37378,
+      "src": "/media/photos/hall-windows-wide-960.webp"
+    },
+    {
+      "slug": "kitchenette",
+      "width": 480,
+      "format": "avif",
+      "bytes": 19514,
+      "src": "/media/photos/kitchenette-480.avif"
+    },
+    {
+      "slug": "kitchenette",
+      "width": 480,
+      "format": "webp",
+      "bytes": 31254,
+      "src": "/media/photos/kitchenette-480.webp"
+    },
+    {
+      "slug": "kitchenette",
+      "width": 720,
+      "format": "avif",
+      "bytes": 36373,
+      "src": "/media/photos/kitchenette-720.avif"
+    },
+    {
+      "slug": "kitchenette",
+      "width": 720,
+      "format": "webp",
+      "bytes": 56444,
+      "src": "/media/photos/kitchenette-720.webp"
+    },
+    {
+      "slug": "kitchenette",
+      "width": 941,
+      "format": "avif",
+      "bytes": 52813,
+      "src": "/media/photos/kitchenette-941.avif"
+    },
+    {
+      "slug": "kitchenette",
+      "width": 941,
+      "format": "webp",
+      "bytes": 79038,
+      "src": "/media/photos/kitchenette-941.webp"
+    },
+    {
+      "slug": "library-and-building",
+      "width": 1280,
+      "format": "avif",
+      "bytes": 60411,
+      "src": "/media/photos/library-and-building-1280.avif"
+    },
+    {
+      "slug": "library-and-building",
+      "width": 1280,
+      "format": "webp",
+      "bytes": 124152,
+      "src": "/media/photos/library-and-building-1280.webp"
+    },
+    {
+      "slug": "library-and-building",
+      "width": 1672,
+      "format": "avif",
+      "bytes": 94474,
+      "src": "/media/photos/library-and-building-1672.avif"
+    },
+    {
+      "slug": "library-and-building",
+      "width": 1672,
+      "format": "webp",
+      "bytes": 187538,
+      "src": "/media/photos/library-and-building-1672.webp"
+    },
+    {
+      "slug": "library-and-building",
+      "width": 640,
+      "format": "avif",
+      "bytes": 18623,
+      "src": "/media/photos/library-and-building-640.avif"
+    },
+    {
+      "slug": "library-and-building",
+      "width": 640,
+      "format": "webp",
+      "bytes": 36734,
+      "src": "/media/photos/library-and-building-640.webp"
+    },
+    {
+      "slug": "library-and-building",
+      "width": 960,
+      "format": "avif",
+      "bytes": 36976,
+      "src": "/media/photos/library-and-building-960.avif"
+    },
+    {
+      "slug": "library-and-building",
+      "width": 960,
+      "format": "webp",
+      "bytes": 74376,
+      "src": "/media/photos/library-and-building-960.webp"
+    },
+    {
+      "slug": "parking-arrow",
+      "width": 1280,
+      "format": "avif",
+      "bytes": 69382,
+      "src": "/media/photos/parking-arrow-1280.avif"
+    },
+    {
+      "slug": "parking-arrow",
+      "width": 1280,
+      "format": "webp",
+      "bytes": 135996,
+      "src": "/media/photos/parking-arrow-1280.webp"
+    },
+    {
+      "slug": "parking-arrow",
+      "width": 1672,
+      "format": "avif",
+      "bytes": 100154,
+      "src": "/media/photos/parking-arrow-1672.avif"
+    },
+    {
+      "slug": "parking-arrow",
+      "width": 1672,
+      "format": "webp",
+      "bytes": 193590,
+      "src": "/media/photos/parking-arrow-1672.webp"
+    },
+    {
+      "slug": "parking-arrow",
+      "width": 640,
+      "format": "avif",
+      "bytes": 21936,
+      "src": "/media/photos/parking-arrow-640.avif"
+    },
+    {
+      "slug": "parking-arrow",
+      "width": 640,
+      "format": "webp",
+      "bytes": 44036,
+      "src": "/media/photos/parking-arrow-640.webp"
+    },
+    {
+      "slug": "parking-arrow",
+      "width": 960,
+      "format": "avif",
+      "bytes": 43994,
+      "src": "/media/photos/parking-arrow-960.avif"
+    },
+    {
+      "slug": "parking-arrow",
+      "width": 960,
+      "format": "webp",
+      "bytes": 87920,
+      "src": "/media/photos/parking-arrow-960.webp"
+    },
+    {
+      "slug": "street-corner",
+      "width": 480,
+      "format": "avif",
+      "bytes": 36935,
+      "src": "/media/photos/street-corner-480.avif"
+    },
+    {
+      "slug": "street-corner",
+      "width": 480,
+      "format": "webp",
+      "bytes": 70582,
+      "src": "/media/photos/street-corner-480.webp"
+    },
+    {
+      "slug": "street-corner",
+      "width": 720,
+      "format": "avif",
+      "bytes": 74265,
+      "src": "/media/photos/street-corner-720.avif"
+    },
+    {
+      "slug": "street-corner",
+      "width": 720,
+      "format": "webp",
+      "bytes": 142168,
+      "src": "/media/photos/street-corner-720.webp"
+    },
+    {
+      "slug": "street-corner",
+      "width": 941,
+      "format": "avif",
+      "bytes": 112797,
+      "src": "/media/photos/street-corner-941.avif"
+    },
+    {
+      "slug": "street-corner",
+      "width": 941,
+      "format": "webp",
+      "bytes": 210016,
+      "src": "/media/photos/street-corner-941.webp"
+    },
+    {
+      "slug": "window-library",
+      "width": 480,
+      "format": "avif",
+      "bytes": 18161,
+      "src": "/media/photos/window-library-480.avif"
+    },
+    {
+      "slug": "window-library",
+      "width": 480,
+      "format": "webp",
+      "bytes": 34392,
+      "src": "/media/photos/window-library-480.webp"
+    },
+    {
+      "slug": "window-library",
+      "width": 720,
+      "format": "avif",
+      "bytes": 34797,
+      "src": "/media/photos/window-library-720.avif"
+    },
+    {
+      "slug": "window-library",
+      "width": 720,
+      "format": "webp",
+      "bytes": 66082,
+      "src": "/media/photos/window-library-720.webp"
+    },
+    {
+      "slug": "window-library",
+      "width": 941,
+      "format": "avif",
+      "bytes": 53314,
+      "src": "/media/photos/window-library-941.avif"
+    },
+    {
+      "slug": "window-library",
+      "width": 941,
+      "format": "webp",
+      "bytes": 98876,
+      "src": "/media/photos/window-library-941.webp"
+    },
+    {
+      "slug": "window-parking",
+      "width": 480,
+      "format": "avif",
+      "bytes": 27836,
+      "src": "/media/photos/window-parking-480.avif"
+    },
+    {
+      "slug": "window-parking",
+      "width": 480,
+      "format": "webp",
+      "bytes": 54508,
+      "src": "/media/photos/window-parking-480.webp"
+    },
+    {
+      "slug": "window-parking",
+      "width": 720,
+      "format": "avif",
+      "bytes": 53135,
+      "src": "/media/photos/window-parking-720.avif"
+    },
+    {
+      "slug": "window-parking",
+      "width": 720,
+      "format": "webp",
+      "bytes": 106130,
+      "src": "/media/photos/window-parking-720.webp"
+    },
+    {
+      "slug": "window-parking",
+      "width": 941,
+      "format": "avif",
+      "bytes": 81984,
+      "src": "/media/photos/window-parking-941.avif"
+    },
+    {
+      "slug": "window-parking",
+      "width": 941,
+      "format": "webp",
+      "bytes": 158676,
+      "src": "/media/photos/window-parking-941.webp"
+    },
+    {
+      "slug": "window-plaza",
+      "width": 480,
+      "format": "avif",
+      "bytes": 25655,
+      "src": "/media/photos/window-plaza-480.avif"
+    },
+    {
+      "slug": "window-plaza",
+      "width": 480,
+      "format": "webp",
+      "bytes": 51986,
+      "src": "/media/photos/window-plaza-480.webp"
+    },
+    {
+      "slug": "window-plaza",
+      "width": 720,
+      "format": "avif",
+      "bytes": 49639,
+      "src": "/media/photos/window-plaza-720.avif"
+    },
+    {
+      "slug": "window-plaza",
+      "width": 720,
+      "format": "webp",
+      "bytes": 97820,
+      "src": "/media/photos/window-plaza-720.webp"
+    },
+    {
+      "slug": "window-plaza",
+      "width": 941,
+      "format": "avif",
+      "bytes": 74665,
+      "src": "/media/photos/window-plaza-941.avif"
+    },
+    {
+      "slug": "window-plaza",
+      "width": 941,
+      "format": "webp",
+      "bytes": 144792,
+      "src": "/media/photos/window-plaza-941.webp"
+    }
+  ]
+}
