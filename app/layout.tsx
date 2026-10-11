@@ -13,8 +13,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "АРКА 123",
-  description: "Пространство для встреч напротив Национальной библиотеки. Мстиславца, 10.",
+  title: {
+    default: "АРКА 123 — пространство для встреч в Минске",
+    template: "%s · АРКА 123",
+  },
+  description:
+    "Пространство для презентаций, переговоров и событий напротив Национальной библиотеки. Минск, Мстиславца, 10.",
+  openGraph: {
+    title: "АРКА 123 — место, где встречаются идеи",
+    description:
+      "Светлое пространство для встреч и событий напротив Национальной библиотеки.",
+    locale: "ru_BY",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

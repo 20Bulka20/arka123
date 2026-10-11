@@ -21,6 +21,11 @@
 /build
 /media/originals/
 /public/media/
+!/public/media/
+/public/media/*
+!/public/media/logos/
+/public/media/logos/*
+!/public/media/logos/arka-123.svg
 # misc
 .DS_Store
 *.pem
