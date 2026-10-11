@@ -1,5 +1,9 @@
 import Image from "next/image";
 import {
+  AnimatedLogo,
+  LogoPreloader,
+} from "@/components/brand/AnimatedLogo";
+import {
   contact,
   facts,
   gallery,
@@ -9,18 +13,6 @@ import {
   tariffs,
   useCases,
 } from "@/data/content";
-
-function BrandMark({ compact = false }: { compact?: boolean }) {
-  return (
-    <span className="brand-mark" aria-label="АРКА 123">
-      <svg aria-hidden="true" viewBox="0 0 36 42">
-        <path d="M3 39V18a15 15 0 0 1 30 0v21" />
-        <path d="M10 39V17m5 22V17l-5 6m9-1c0-3 2-5 5-5s5 2 5 5c0 5-10 7-10 17h11m-11-17h10" />
-      </svg>
-      {!compact && <span>АРКА 123</span>}
-    </span>
-  );
-}
 
 function ArrowIcon() {
   return (
@@ -33,10 +25,9 @@ function ArrowIcon() {
 export default function Home() {
   return (
     <>
+      <LogoPreloader />
       <header className="site-header">
-        <a className="logo-link" href="#top">
-          <BrandMark />
-        </a>
+        <AnimatedLogo href="#top" />
         <nav className="desktop-nav" aria-label="Основная навигация">
           {navigation.map((item) => (
             <a href={item.href} key={item.href}>
@@ -333,7 +324,7 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="shell footer-top">
-          <BrandMark />
+          <AnimatedLogo variant="footer" />
           <div>
             <p>{contact.address}</p>
             <span>{contact.landmark}</span>
