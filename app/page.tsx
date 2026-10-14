@@ -3,6 +3,8 @@ import {
   AnimatedLogo,
   LogoPreloader,
 } from "@/components/brand/AnimatedLogo";
+import { ScrollFilm } from "@/components/hero/ScrollFilm";
+import { SpaceExperience } from "@/components/space/SpaceExperience";
 import {
   contact,
   facts,
@@ -42,35 +44,7 @@ export default function Home() {
       </header>
 
       <main id="top">
-        <section className="hero" aria-labelledby="hero-title">
-          <div className="hero-media">
-            <Image
-              src="/media/photos/hall-windows-wide-1672.avif"
-              alt="Зал АРКА 123 с двумя арочными окнами"
-              fill
-              priority
-              sizes="100vw"
-            />
-            <div className="hero-shade" />
-          </div>
-          <div className="hero-content shell">
-            <p className="eyebrow light">Пространство для встреч · Минск</p>
-            <h1 id="hero-title">
-              Место, где
-              <br />
-              <em>встречаются</em> идеи
-            </h1>
-            <div className="hero-bottom">
-              <p>
-                Светлое пространство напротив Национальной библиотеки для
-                презентаций, переговоров и событий вашего формата.
-              </p>
-              <a className="round-link" href="#about" aria-label="Узнать о пространстве">
-                <ArrowIcon />
-              </a>
-            </div>
-          </div>
-        </section>
+        <ScrollFilm />
 
         <section className="section intro shell" id="about" aria-labelledby="about-title">
           <div className="section-index">01 / О пространстве</div>
@@ -96,46 +70,75 @@ export default function Home() {
           </div>
         </section>
 
+        <section
+          className="host-section section"
+          id="host"
+          aria-labelledby="host-title"
+        >
+          <div className="shell host-layout">
+            <div className="host-media">
+              <Image
+                src="/media/woman/host-full-960.avif"
+                alt="Фирменная героиня АРКА 123 в графитовом костюме"
+                fill
+                sizes="(max-width: 768px) 100vw, 48vw"
+              />
+              <div className="host-portrait" aria-hidden="true">
+                <Image
+                  src="/media/woman/host-portrait-960.avif"
+                  alt=""
+                  fill
+                  sizes="(max-width: 768px) 38vw, 16vw"
+                />
+              </div>
+              <span className="host-mark">123</span>
+            </div>
+
+            <div className="host-copy">
+              <div className="section-index">02 / Герой пространства</div>
+              <p className="eyebrow">Хозяйка АРКА 123</p>
+              <h2 id="host-title">
+                Встречает.
+                <br />
+                <em>Показывает. Помогает.</em>
+              </h2>
+              <p className="lead">
+                Фирменная героиня — спокойный куратор пространства. Она
+                знакомит гостей с залом, помогает выбрать формат и делает
+                строгий архитектурный образ бренда человечнее.
+              </p>
+              <div className="host-detail">
+                <span>Фирменная деталь</span>
+                <p>
+                  Брошь повторяет знак арочного окна и связывает персонажа с
+                  айдентикой АРКА 123.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="space-section section" id="space" aria-labelledby="space-title">
           <div className="shell">
             <div className="section-heading inverse">
-              <div className="section-index">02 / Внутри</div>
+              <div className="section-index">03 / Внутри</div>
               <h2 id="space-title">
                 Посмотрите на зал
                 <br />
                 <em>изнутри</em>
               </h2>
               <p>
-                Базовый кадр будущей объёмной сцены. Архитектура останется
-                неизменной — будут меняться только сценарии использования.
+                Обход по реальным ракурсам зала: окна, торец и кухонная зона.
+                Переключайте сценарии рассадки поверх исходной архитектуры.
               </p>
             </div>
-            <div className="space-stage">
-              <Image
-                src="/media/photos/hall-windows-wide-1672.avif"
-                alt="Панорамный вид пустого зала"
-                fill
-                sizes="(max-width: 768px) 100vw, 90vw"
-              />
-              <div className="space-stage-ui">
-                <span className="status-dot">Статичный обзор</span>
-                <span>Перемещайте курсор</span>
-              </div>
-              <div className="space-hotspot" aria-hidden="true">
-                <span>01</span>
-              </div>
-            </div>
-            <div className="mode-list" aria-label="Будущие режимы пространства">
-              <span className="active">Пустое пространство</span>
-              <span>Презентация</span>
-              <span>Работа за столами</span>
-            </div>
+            <SpaceExperience />
           </div>
         </section>
 
         <section className="section shell" id="formats" aria-labelledby="formats-title">
           <div className="section-heading">
-            <div className="section-index">03 / Форматы</div>
+            <div className="section-index">04 / Форматы</div>
             <h2 id="formats-title">
               Один зал.
               <br />
@@ -159,7 +162,7 @@ export default function Home() {
         <section className="services section" aria-labelledby="services-title">
           <div className="shell services-layout">
             <div className="services-title">
-              <div className="section-index">04 / Всё готово</div>
+              <div className="section-index">05 / Всё готово</div>
               <h2 id="services-title">
                 Внимание
                 <br />
@@ -185,7 +188,7 @@ export default function Home() {
         <section className="section shell" id="tariffs" aria-labelledby="tariffs-title">
           <div className="section-heading split-heading">
             <div>
-              <div className="section-index">05 / Тарифы</div>
+              <div className="section-index">06 / Тарифы</div>
               <h2 id="tariffs-title">
                 Выберите
                 <br />
@@ -225,7 +228,7 @@ export default function Home() {
           <div className="shell">
             <div className="section-heading inverse split-heading">
               <div>
-                <div className="section-index">06 / Галерея</div>
+                <div className="section-index">07 / Галерея</div>
                 <h2 id="gallery-title">
                   Свет.
                   <br />
@@ -262,7 +265,7 @@ export default function Home() {
 
         <section className="section shell" id="reviews" aria-labelledby="reviews-title">
           <div className="section-heading">
-            <div className="section-index">07 / Отзывы</div>
+            <div className="section-index">08 / Отзывы</div>
             <h2 id="reviews-title">
               Здесь говорят
               <br />
