@@ -129,9 +129,19 @@ export function LogoPreloader() {
   const [exiting, setExiting] = useState(false);
 
   useEffect(() => {
-    if (window.sessionStorage.getItem(SESSION_KEY)) {
+    const params = new URLSearchParams(window.location.search);
+    const forceIntro =
+      params.has("intro") ||
+      params.get("replay") === "1" ||
+      params.get("preloader") === "1";
+
+    if (!forceIntro && window.sessionStorage.getItem(SESSION_KEY)) {
       queueMicrotask(() => setVisible(false));
       return;
+    }
+
+    if (forceIntro) {
+      window.sessionStorage.removeItem(SESSION_KEY);
     }
 
     const reducedMotion = window.matchMedia(

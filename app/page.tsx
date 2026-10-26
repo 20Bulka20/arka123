@@ -1,314 +1,178 @@
 import Image from "next/image";
-import { AnimatedLogo, LogoPreloader } from "@/components/brand/AnimatedLogo";
-import { ScrollFilm } from "@/components/hero/ScrollFilm";
-import { ReviewsSlider } from "@/components/reviews/ReviewsSlider";
-import { SpaceSlider } from "@/components/space/SpaceSlider";
-import { TariffGrid } from "@/components/tariffs/TariffGrid";
-import {
-  contact,
-  navigation,
-  services,
-  spaceSpecs,
-  useCases,
-} from "@/data/content";
+import Link from "next/link";
+import type { Metadata } from "next";
+import { submission } from "@/data/submission";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Тестовое задание · АРКА 123",
+  description:
+    "Cover-страница тестового задания: что сделано, какие ИИ использованы, lookbook персонажа и видео героя.",
+};
+
+function StatusPill({ status }: { status: "done" | "skipped" }) {
   return (
-    <>
-      <LogoPreloader />
-      <header className="site-header">
-        <AnimatedLogo href="#top" />
-        <nav className="desktop-nav" aria-label="Основная навигация">
-          {navigation.map((item) => (
-            <a href={item.href} key={item.href}>
-              {item.label}
-            </a>
-          ))}
-        </nav>
+    <span className={`cover-status cover-status--${status}`}>
+      {status === "done" ? "Выполнено" : "Не выполнялось"}
+    </span>
+  );
+}
+
+export default function CoverPage() {
+  return (
+    <main className="cover">
+      <header className="cover-hero shell">
+        <p className="cover-eyebrow">Тестовое задание · позиция вайбкодера</p>
+        <h1>
+          {submission.brand}
+          <br />
+          <em>под ключ</em>
+        </h1>
+        <p className="cover-lead">{submission.summary}</p>
+        <div className="cover-hero-actions">
+          <Link className="cover-cta" href={submission.siteHref}>
+            Открыть сайт
+            <span aria-hidden="true">→</span>
+          </Link>
+          <a className="cover-cta-ghost" href="#lookbook">
+            Lookbook и видео
+          </a>
+        </div>
+        <dl className="cover-meta">
+          <div>
+            <dt>Время</dt>
+            <dd>{submission.timeSpent}</dd>
+          </div>
+          <div>
+            <dt>Стек</dt>
+            <dd>Next.js · TypeScript · Tailwind</dd>
+          </div>
+          <div>
+            <dt>Объём</dt>
+            <dd>4 из 5 частей задания</dd>
+          </div>
+        </dl>
       </header>
 
-      <main id="top">
-        <ScrollFilm />
-
-        <section
-          className="section intro shell"
-          id="about"
-          aria-labelledby="about-title"
-        >
-          <div className="section-index">01 / О пространстве</div>
-          <div className="intro-stage">
-            <div className="intro-window">
-              <Image
-                src="/media/photos/window-view-896.webp"
-                alt="Вид на Национальную библиотеку через арочное окно"
-                fill
-                sizes="(max-width: 900px) 100vw, 1480px"
-                priority
-              />
-            </div>
-            <div className="intro-copy">
-              <h2 id="about-title">
-                Архитектура задаёт
-                <br />
-                <em>другой ритм</em>
-                <br />
-                встречи
-              </h2>
-              <p className="lead">
-                АРКА 123 — лаконичный зал с естественным светом, характерными
-                окнами и видом на город. Чистая основа, которую легко настроить
-                под вашу задачу.
-              </p>
-            </div>
-            <figure className="intro-curator">
-              <div className="intro-curator-media">
-                <Image
-                  src="/media/woman/host-without-bg-960.webp"
-                  alt="Куратор пространства АРКА 123"
-                  fill
-                  sizes="(max-width: 900px) 0px, 22rem"
-                />
-              </div>
-            </figure>
-          </div>
-        </section>
-
-        <section
-          className="space-section section"
-          id="space"
-          aria-labelledby="space-title"
-        >
-          <div className="shell">
-            <div className="section-heading inverse">
-              <div className="section-index">02 / Внутри</div>
-              <h2 id="space-title">
-                Посмотрите на зал
-                <br />
-                <em>изнутри</em>
-              </h2>
-              <p>Реальные ракурсы пространства.</p>
-            </div>
-            <SpaceSlider />
-          </div>
-        </section>
-
-        <section
-          className="section facts-section"
-          id="plan"
-          aria-label="План и характеристики пространства"
-        >
-          <div className="shell facts-layout">
-            <div className="section-index">03 / Пространство</div>
-
-            <figure className="plan-figure">
-              <a
-                href="/media/photos/mock-plan-1536.webp"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Image
-                  src="/media/photos/mock-plan-1536.webp"
-                  alt="Предварительный план пространства АРКА 123"
-                  width={1536}
-                  height={1024}
-                  sizes="(max-width: 900px) 100vw, 1400px"
-                  quality={95}
-                  unoptimized
-                />
-              </a>
-            </figure>
-
-            <div className="plan-story-list">
-              <ul className="space-features">
-                {spaceSpecs.map((spec) => (
-                  <li key={spec.label}>
-                    <span className="space-feature-mark" aria-hidden="true">
-                      ✦
-                    </span>
-                    <span>
-                      {spec.label} — {spec.value}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <p className="space-specs-note">
-                Некоторые элементы ремонта можно переделать под себя!
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section
-          className="section shell"
-          id="formats"
-          aria-labelledby="formats-title"
-        >
-          <div className="section-heading">
-            <div className="section-index">04 / Форматы</div>
-            <h2 id="formats-title">
-              Один зал.
-              <br />
-              <em>Несколько сценариев.</em>
-            </h2>
-          </div>
-          <div className="use-case-grid">
-            {useCases.map((item) => (
-              <article className="use-case" key={item.number}>
-                <span className="case-number">{item.number}</span>
-                <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </div>
-                <span className="case-capacity">{item.capacity}</span>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="services section" aria-labelledby="services-title">
-          <div className="shell services-layout">
-            <div className="services-title">
-              <div className="section-index">05 / Всё готово</div>
-              <h2 id="services-title">
-                Внимание
-                <br />
-                <em>к деталям</em>
-              </h2>
-              <p>
-                Базовые услуги уже заложены в модель. Состав и условия будут
-                уточнены перед публикацией.
-              </p>
-            </div>
-            <div className="service-list">
-              {services.map((service, index) => (
-                <article key={service.title}>
-                  <span>0{index + 1}</span>
-                  <h3>{service.title}</h3>
-                  <p>{service.description}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section
-          className="section tariffs-section"
-          id="tariffs"
-          aria-labelledby="tariffs-title"
-        >
-          <div className="shell">
-            <div className="section-heading split-heading">
-              <div>
-                <div className="section-index">06 / Тарифы</div>
-                <h2 id="tariffs-title">
-                  Выберите
-                  <br />
-                  <em>свой формат</em>
-                </h2>
-              </div>
-              <p>
-                Финальная стоимость зависит от длительности, рассадки и
-                дополнительного оборудования.
-              </p>
-            </div>
-            <TariffGrid />
-          </div>
-        </section>
-
-        <section
-          className="section reviews-section"
-          id="reviews"
-          aria-labelledby="reviews-title"
-        >
-          <div className="shell">
-            <div className="section-heading reviews-heading">
-              <div className="section-index">07 / Отзывы</div>
-              <h2 id="reviews-title">
-                Здесь говорят
-                <br />
-                <em>по делу</em>
-              </h2>
-            </div>
-            <ReviewsSlider />
-          </div>
-        </section>
-
-        <section
-          className="contact-section section"
-          id="contact"
-          aria-labelledby="contact-title"
-        >
-          <div className="shell contact-head">
-            <div className="section-index">Контакты</div>
-            <h2 id="contact-title">
-              Встретимся
-              <br />
-              <em>в АРКА 123?</em>
-            </h2>
-
-            <div className="contact-layout">
-              <div className="contact-place">
-                <p>{contact.address}</p>
-                <p>{contact.landmark}</p>
-                <small>
-                  Напишите или позвоните — уточним свободное время и подготовим
-                  расчёт под ваш сценарий.
-                </small>
-              </div>
-
-              <div className="contact-links">
-                <a href={contact.phoneHref}>{contact.phone}</a>
-                <a className="contact-email" href={contact.emailHref}>
-                  {contact.email}
-                </a>
-                <div className="contact-socials" aria-label="Социальные сети">
-                  {contact.socials.map((item) => (
-                    <a
-                      className="contact-social"
-                      href={item.href}
-                      key={item.label}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label={item.label}
-                    >
-                      <img src={item.icon} alt="" width={28} height={28} />
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="contact-map">
-            <iframe
-              title="Карта: Минск, ул. Петра Мстиславца, 10"
-              src={`https://yandex.ru/map-widget/v1/?ll=${contact.map.lng}%2C${contact.map.lat}&z=${contact.map.zoom}&pt=${contact.map.lng},${contact.map.lat},pm2rdm&l=map`}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
-          </div>
-        </section>
-      </main>
-
-      <footer className="site-footer">
-        <div className="shell footer-top">
-          <AnimatedLogo variant="footer" />
-          <div>
-            <p>{contact.address}</p>
-            <span>{contact.landmark}</span>
-          </div>
-          <div className="footer-contacts">
-            <a href={contact.phoneHref}>{contact.phone}</a>
-            <a href={contact.emailHref}>{contact.email}</a>
-          </div>
+      <section className="cover-section shell" id="tasks" aria-labelledby="tasks-title">
+        <div className="cover-section-head">
+          <p className="cover-eyebrow">01 / Что сделано</p>
+          <h2 id="tasks-title">Части тестового задания</h2>
         </div>
-        <div className="shell footer-bottom">
-          <span>© АРКА 123</span>
-          <a href="#plan">План пространства</a>
-          <a href="#top">Наверх ↑</a>
+        <ol className="cover-tasks">
+          {submission.tasks.map((task) => (
+            <li key={task.id}>
+              <div className="cover-task-top">
+                <span className="cover-task-num">0{task.id}</span>
+                <StatusPill status={task.status} />
+              </div>
+              <h3>{task.title}</h3>
+              <p>{task.detail}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="cover-section shell" id="tools" aria-labelledby="tools-title">
+        <div className="cover-section-head">
+          <p className="cover-eyebrow">02 / Инструменты</p>
+          <h2 id="tools-title">Нейросети и подписки</h2>
+          <p>
+            Ниже — фактический набор инструментов. Модели внутри Cursor
+            менялись по ходу работы; отдельно зафиксированы генераторы
+            персонажа и видео.
+          </p>
         </div>
-      </footer>
-    </>
+        <ul className="cover-tools">
+          {submission.tools.map((tool) => (
+            <li key={tool.name}>
+              <strong>
+                {"href" in tool && tool.href ? (
+                  <a href={tool.href} target="_blank" rel="noreferrer">
+                    {tool.name}
+                  </a>
+                ) : (
+                  tool.name
+                )}
+              </strong>
+              <span>{tool.role}</span>
+            </li>
+          ))}
+        </ul>
+        <ul className="cover-stack" aria-label="Технологии сайта">
+          {submission.stack.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <p className="cover-time-note">
+          <strong>Затраченное время:</strong> {submission.timeSpent}.{" "}
+          {submission.timeNote}
+        </p>
+      </section>
+
+      <section
+        className="cover-section shell"
+        id="lookbook"
+        aria-labelledby="lookbook-title"
+      >
+        <div className="cover-section-head">
+          <p className="cover-eyebrow">03 / Персонаж</p>
+          <h2 id="lookbook-title">Lookbook</h2>
+          <p>
+            Канонический образ сгенерирован в ChatGPT: строгий графитовый
+            костюм и брошь в виде логотипа. Роль — куратор пространства.
+          </p>
+        </div>
+        <figure className="cover-lookbook">
+          <Image
+            src={submission.lookbook.src}
+            alt={submission.lookbook.alt}
+            width={submission.lookbook.width}
+            height={submission.lookbook.height}
+            sizes="(max-width: 1100px) 100vw, 1100px"
+            priority={false}
+          />
+          <figcaption>{submission.lookbook.caption}</figcaption>
+        </figure>
+      </section>
+
+      <section className="cover-section shell" id="video" aria-labelledby="video-title">
+        <div className="cover-section-head">
+          <p className="cover-eyebrow">04 / Видео</p>
+          <h2 id="video-title">Герой на сайте</h2>
+          <p>
+            Ролик собран в MiniMax Hailuo AI. На сайте запускается при скролле;
+            текст поверх меняется по таймкодам.
+          </p>
+        </div>
+        <figure className="cover-video">
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            poster={submission.video.poster}
+          >
+            <source src={submission.video.src} type="video/mp4" />
+          </video>
+          <figcaption>{submission.video.caption}</figcaption>
+        </figure>
+      </section>
+
+      <section className="cover-final shell" aria-labelledby="final-title">
+        <p className="cover-eyebrow">Результат</p>
+        <h2 id="final-title">
+          Готовый сайт
+          <br />
+          <em>АРКА 123</em>
+        </h2>
+        <p>
+          Слоган, логотип, фирменные цвета, прелоадер, персонаж, видео и
+          коммерческие блоки собраны в одну адаптивную страницу.
+        </p>
+        <Link className="cover-cta" href={submission.siteHref}>
+          Перейти к сайту
+          <span aria-hidden="true">→</span>
+        </Link>
+      </section>
+    </main>
   );
 }
