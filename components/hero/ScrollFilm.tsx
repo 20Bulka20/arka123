@@ -107,10 +107,7 @@ export function ScrollFilm() {
           aria-hidden="true"
           tabIndex={-1}
         >
-          <source
-            src="/media/woman/woman-greet-2k.mp4"
-            type="video/mp4"
-          />
+          <source src="/media/woman/woman-greet-2k.mp4" type="video/mp4" />
         </video>
 
         <div className="scroll-film__shade" aria-hidden="true" />
@@ -149,7 +146,6 @@ export function ScrollFilm() {
             }`}
             aria-hidden={activeChapter !== 2}
           >
-            <p className="eyebrow light">Главное преимущество</p>
             <h2>
               Две арки.
               <br />
