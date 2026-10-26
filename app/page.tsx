@@ -7,6 +7,7 @@ import {
   navigation,
   reviews,
   services,
+  spaceSpecs,
   tariffs,
   useCases,
 } from "@/data/content";
@@ -81,6 +82,43 @@ export default function Home() {
                 />
               </div>
             </figure>
+          </div>
+
+          <div className="plan-story" id="plan">
+            <figure className="plan-figure">
+              <a
+                href="/media/photos/mock-plan-1536.webp"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src="/media/photos/mock-plan-1280.webp"
+                  alt="Предварительный план пространства АРКА 123"
+                  width={1280}
+                  height={853}
+                  sizes="(max-width: 700px) 100vw, (max-width: 1100px) 48vw, 36rem"
+                  quality={95}
+                  unoptimized
+                />
+              </a>
+            </figure>
+            <div className="plan-story-list">
+              <ul className="space-features">
+                {spaceSpecs.map((spec) => (
+                  <li key={spec.label}>
+                    <span className="space-feature-mark" aria-hidden="true">
+                      ✦
+                    </span>
+                    <span>
+                      {spec.label} — {spec.value}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <p className="space-specs-note">
+                Некоторые элементы ремонта можно переделать под себя!
+              </p>
+            </div>
           </div>
         </section>
 
@@ -230,55 +268,59 @@ export default function Home() {
         </section>
 
         <section
-          className="contact-section"
+          className="contact-section section"
           id="contact"
           aria-labelledby="contact-title"
         >
-          <div className="contact-media">
-            <Image
-              src="/media/photos/library-and-building-1672.avif"
-              alt="Национальная библиотека и здание с аркадой"
-              fill
-              sizes="100vw"
-            />
-          </div>
-          <div className="shell contact-card">
-            <p className="eyebrow light">Мстиславца, 10 · Минск</p>
+          <div className="shell contact-head">
+            <div className="section-index">Контакты</div>
             <h2 id="contact-title">
               Встретимся
               <br />
               <em>в АРКА 123?</em>
             </h2>
-            <p>
-              Расскажите о событии — уточним свободное время и подготовим расчёт
-              под ваш сценарий.
-            </p>
-            <form className="contact-form">
-              <label>
-                <span>Имя</span>
-                <input
-                  name="name"
-                  type="text"
-                  placeholder="Как к вам обращаться?"
-                />
-              </label>
-              <label>
-                <span>Телефон или почта</span>
-                <input
-                  name="contact"
-                  type="text"
-                  placeholder="+375 или email"
-                />
-              </label>
-              <button type="button">
-                Оставить заявку
-                <ArrowIcon />
-              </button>
-            </form>
-            <small>
-              Демо-форма: отправка будет подключена после согласования
-              контактов.
-            </small>
+
+            <div className="contact-layout">
+              <div className="contact-place">
+                <p>{contact.address}</p>
+                <p>{contact.landmark}</p>
+                <small>
+                  Напишите или позвоните — уточним свободное время и подготовим
+                  расчёт под ваш сценарий.
+                </small>
+              </div>
+
+              <div className="contact-links">
+                <a href={contact.phoneHref}>{contact.phone}</a>
+                <a className="contact-email" href={contact.emailHref}>
+                  {contact.email}
+                </a>
+                <div className="contact-socials" aria-label="Социальные сети">
+                  {contact.socials.map((item) => (
+                    <a
+                      className="contact-social"
+                      href={item.href}
+                      key={item.label}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={item.label}
+                    >
+                      <img src={item.icon} alt="" width={28} height={28} />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="contact-map">
+            <iframe
+              title="Карта: Минск, ул. Петра Мстиславца, 10"
+              src={`https://yandex.ru/map-widget/v1/?ll=${contact.map.lng}%2C${contact.map.lat}&z=${contact.map.zoom}&pt=${contact.map.lng},${contact.map.lat},pm2rdm&l=map`}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
           </div>
         </section>
       </main>
@@ -297,6 +339,7 @@ export default function Home() {
         </div>
         <div className="shell footer-bottom">
           <span>© АРКА 123</span>
+          <a href="#plan">План пространства</a>
           <a href="#top">Наверх ↑</a>
         </div>
       </footer>

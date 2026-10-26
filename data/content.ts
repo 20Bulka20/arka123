@@ -47,6 +47,15 @@ export const navigation: readonly NavigationItem[] = [
   { label: "Контакты", href: "#contact" },
 ];
 
+export const spaceSpecs: readonly { label: string; value: string }[] = [
+  { label: "Высота потолка", value: "до 4.5 метров" },
+  { label: "Арочные окна", value: "два, 4 × 3 м" },
+  { label: "Пол", value: "кварцвинил под паркет" },
+  { label: "Стены", value: "декоративная штукатурка + стеновые панели" },
+  { label: "Потолок", value: "окрашенный в цвет антрацит" },
+  { label: "Освещение", value: "33 мощных панели" },
+];
+
 export const useCases: readonly UseCase[] = [
   {
     number: "01",
@@ -180,8 +189,26 @@ export const reviews: readonly Review[] = [
 export const contact = {
   address: "Минск, ул. Петра Мстиславца, 10",
   landmark: "напротив Национальной библиотеки",
-  phone: "+375 (00) 000-00-00",
-  phoneHref: "tel:+375000000000",
+  phone: "+375 (123) 000-00-00",
+  phoneHref: "tel:+375291234567",
   email: "hello@arka123.by",
   emailHref: "mailto:hello@arka123.by",
+  /** Approximate pin for ул. Петра Мстиславца, 10 */
+  map: {
+    lat: 53.93105,
+    lng: 27.64635,
+    zoom: 16,
+  },
+  socials: [
+    {
+      label: "Instagram",
+      href: "https://instagram.com/arka123",
+      icon: "/media/icons/instagram-1-svgrepo-com.svg",
+    },
+    {
+      label: "Telegram",
+      href: "https://t.me/arka123",
+      icon: "/media/icons/telegram-svgrepo-com.svg",
+    },
+  ],
 } as const;
