@@ -1,24 +1,16 @@
 import Image from "next/image";
 import { AnimatedLogo, LogoPreloader } from "@/components/brand/AnimatedLogo";
 import { ScrollFilm } from "@/components/hero/ScrollFilm";
+import { ReviewsSlider } from "@/components/reviews/ReviewsSlider";
 import { SpaceSlider } from "@/components/space/SpaceSlider";
+import { TariffGrid } from "@/components/tariffs/TariffGrid";
 import {
   contact,
   navigation,
-  reviews,
   services,
   spaceSpecs,
-  tariffs,
   useCases,
 } from "@/data/content";
-
-function ArrowIcon() {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 20 20">
-      <path d="M3 10h13m-5-5 5 5-5 5" />
-    </svg>
-  );
-}
 
 export default function Home() {
   return (
@@ -33,10 +25,6 @@ export default function Home() {
             </a>
           ))}
         </nav>
-        <a className="header-cta" href="#contact">
-          Обсудить событие
-          <ArrowIcon />
-        </a>
       </header>
 
       <main id="top">
@@ -83,43 +71,6 @@ export default function Home() {
               </div>
             </figure>
           </div>
-
-          <div className="plan-story" id="plan">
-            <figure className="plan-figure">
-              <a
-                href="/media/photos/mock-plan-1536.webp"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Image
-                  src="/media/photos/mock-plan-1280.webp"
-                  alt="Предварительный план пространства АРКА 123"
-                  width={1280}
-                  height={853}
-                  sizes="(max-width: 700px) 100vw, (max-width: 1100px) 48vw, 36rem"
-                  quality={95}
-                  unoptimized
-                />
-              </a>
-            </figure>
-            <div className="plan-story-list">
-              <ul className="space-features">
-                {spaceSpecs.map((spec) => (
-                  <li key={spec.label}>
-                    <span className="space-feature-mark" aria-hidden="true">
-                      ✦
-                    </span>
-                    <span>
-                      {spec.label} — {spec.value}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <p className="space-specs-note">
-                Некоторые элементы ремонта можно переделать под себя!
-              </p>
-            </div>
-          </div>
         </section>
 
         <section
@@ -142,12 +93,58 @@ export default function Home() {
         </section>
 
         <section
+          className="section facts-section"
+          id="plan"
+          aria-label="План и характеристики пространства"
+        >
+          <div className="shell facts-layout">
+            <div className="section-index">03 / Пространство</div>
+
+            <figure className="plan-figure">
+              <a
+                href="/media/photos/mock-plan-1536.webp"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src="/media/photos/mock-plan-1536.webp"
+                  alt="Предварительный план пространства АРКА 123"
+                  width={1536}
+                  height={1024}
+                  sizes="(max-width: 900px) 100vw, 1400px"
+                  quality={95}
+                  unoptimized
+                />
+              </a>
+            </figure>
+
+            <div className="plan-story-list">
+              <ul className="space-features">
+                {spaceSpecs.map((spec) => (
+                  <li key={spec.label}>
+                    <span className="space-feature-mark" aria-hidden="true">
+                      ✦
+                    </span>
+                    <span>
+                      {spec.label} — {spec.value}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <p className="space-specs-note">
+                Некоторые элементы ремонта можно переделать под себя!
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
           className="section shell"
           id="formats"
           aria-labelledby="formats-title"
         >
           <div className="section-heading">
-            <div className="section-index">03 / Форматы</div>
+            <div className="section-index">04 / Форматы</div>
             <h2 id="formats-title">
               Один зал.
               <br />
@@ -171,7 +168,7 @@ export default function Home() {
         <section className="services section" aria-labelledby="services-title">
           <div className="shell services-layout">
             <div className="services-title">
-              <div className="section-index">04 / Всё готово</div>
+              <div className="section-index">05 / Всё готово</div>
               <h2 id="services-title">
                 Внимание
                 <br />
@@ -195,75 +192,44 @@ export default function Home() {
         </section>
 
         <section
-          className="section shell"
+          className="section tariffs-section"
           id="tariffs"
           aria-labelledby="tariffs-title"
         >
-          <div className="section-heading split-heading">
-            <div>
-              <div className="section-index">05 / Тарифы</div>
-              <h2 id="tariffs-title">
-                Выберите
-                <br />
-                <em>свой формат</em>
-              </h2>
+          <div className="shell">
+            <div className="section-heading split-heading">
+              <div>
+                <div className="section-index">06 / Тарифы</div>
+                <h2 id="tariffs-title">
+                  Выберите
+                  <br />
+                  <em>свой формат</em>
+                </h2>
+              </div>
+              <p>
+                Финальная стоимость зависит от длительности, рассадки и
+                дополнительного оборудования.
+              </p>
             </div>
-            <p>
-              Финальная стоимость зависит от длительности, рассадки и
-              дополнительного оборудования.
-            </p>
-          </div>
-          <div className="tariff-grid">
-            {tariffs.map((tariff) => (
-              <article
-                className={`tariff ${tariff.featured ? "featured" : ""}`}
-                key={tariff.name}
-              >
-                <p className="tariff-eyebrow">{tariff.eyebrow}</p>
-                <h3>{tariff.name}</h3>
-                <p className="tariff-description">{tariff.description}</p>
-                <div className="price">
-                  <strong>{tariff.price}</strong>
-                  <span>{tariff.unit}</span>
-                </div>
-                <ul>
-                  {tariff.features.map((feature) => (
-                    <li key={feature}>{feature}</li>
-                  ))}
-                </ul>
-                <a href="#contact">
-                  Запросить расчёт
-                  <ArrowIcon />
-                </a>
-              </article>
-            ))}
+            <TariffGrid />
           </div>
         </section>
 
         <section
-          className="section shell"
+          className="section reviews-section"
           id="reviews"
           aria-labelledby="reviews-title"
         >
-          <div className="section-heading">
-            <div className="section-index">06 / Отзывы</div>
-            <h2 id="reviews-title">
-              Здесь говорят
-              <br />
-              <em>по делу</em>
-            </h2>
-          </div>
-          <div className="review-grid">
-            {reviews.map((review) => (
-              <figure className="review" key={review.author}>
-                <span>Макет отзыва</span>
-                <blockquote>«{review.quote}»</blockquote>
-                <figcaption>
-                  <strong>{review.author}</strong>
-                  <small>{review.context}</small>
-                </figcaption>
-              </figure>
-            ))}
+          <div className="shell">
+            <div className="section-heading reviews-heading">
+              <div className="section-index">07 / Отзывы</div>
+              <h2 id="reviews-title">
+                Здесь говорят
+                <br />
+                <em>по делу</em>
+              </h2>
+            </div>
+            <ReviewsSlider />
           </div>
         </section>
 

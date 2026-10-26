@@ -48,20 +48,20 @@ const slides = [
   },
 ] as const;
 
+const AUTOPLAY_MS = 4500;
+
 export function SpaceSlider() {
   const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
   const dragOrigin = useRef<number | null>(null);
 
   const goTo = useCallback((next: number) => {
     setIndex(((next % slides.length) + slides.length) % slides.length);
   }, []);
 
-  const step = useCallback(
-    (direction: -1 | 1) => {
-      setIndex((current) => (current + direction + slides.length) % slides.length);
-    },
-    [],
-  );
+  const step = useCallback((direction: -1 | 1) => {
+    setIndex((current) => (current + direction + slides.length) % slides.length);
+  }, []);
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -72,28 +72,55 @@ export function SpaceSlider() {
     return () => window.removeEventListener("keydown", onKey);
   }, [step]);
 
+  useEffect(() => {
+    if (paused) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const timer = window.setInterval(() => {
+      step(1);
+    }, AUTOPLAY_MS);
+
+    return () => window.clearInterval(timer);
+  }, [paused, step, index]);
+
   const onPointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
     if ((event.target as HTMLElement).closest("button")) return;
     dragOrigin.current = event.clientX;
+    setPaused(true);
     event.currentTarget.setPointerCapture(event.pointerId);
   };
 
   const onPointerUp = (event: ReactPointerEvent<HTMLDivElement>) => {
-    if (dragOrigin.current === null) return;
+    if (dragOrigin.current === null) {
+      setPaused(false);
+      return;
+    }
     const delta = event.clientX - dragOrigin.current;
     dragOrigin.current = null;
+    setPaused(false);
     if (Math.abs(delta) < 48) return;
     step(delta < 0 ? 1 : -1);
   };
 
   return (
-    <div className="space-slider">
+    <div
+      className="space-slider"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocusCapture={() => setPaused(true)}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+          setPaused(false);
+        }
+      }}
+    >
       <div
         className="space-slider-frame"
         onPointerDown={onPointerDown}
         onPointerUp={onPointerUp}
         onPointerCancel={() => {
           dragOrigin.current = null;
+          setPaused(false);
         }}
       >
         {slides.map((item, itemIndex) => (

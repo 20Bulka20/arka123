@@ -79,7 +79,7 @@ input {
   left: 0;
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr auto;
   align-items: center;
   gap: 2rem;
   padding: 1.35rem var(--page-gutter);
@@ -384,25 +384,14 @@ input {
   font-size: 0.75rem;
 }
 
-.desktop-nav a,
-.header-cta {
+.desktop-nav a {
   transition: opacity 180ms ease;
 }
 
-.desktop-nav a:hover,
-.header-cta:hover {
+.desktop-nav a:hover {
   opacity: 0.65;
 }
 
-.header-cta {
-  display: inline-flex;
-  justify-self: end;
-  align-items: center;
-  gap: 0.65rem;
-  font-size: 0.75rem;
-}
-
-.header-cta svg,
 .tariff a svg {
   width: 1rem;
   fill: none;
@@ -888,29 +877,19 @@ h2 em {
   background: var(--ink);
 }
 
-.plan-story {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  align-items: start;
-  margin-top: clamp(2rem, 4vw, 3.5rem);
-  padding-top: clamp(1.75rem, 3.5vw, 2.75rem);
-  border-top: 1px solid var(--line);
+.facts-section {
+  justify-content: flex-start;
+  background: var(--milk);
 }
 
-@media (min-width: 901px) {
-  .plan-story {
-    grid-template-columns: minmax(15rem, 0.9fr) minmax(16rem, 1.15fr);
-    gap: clamp(1.5rem, 3.5vw, 3rem);
-    align-items: center;
-    padding-left: var(--intro-copy-inset);
-  }
+.facts-layout {
+  display: grid;
+  gap: clamp(1.75rem, 3.5vw, 2.75rem);
+  padding-block: clamp(0.5rem, 2vh, 1.5rem);
 }
 
-.plan-story-list {
-  display: grid;
-  gap: 1.15rem;
-  min-width: 0;
+.facts-section .section-index {
+  margin-bottom: 0;
 }
 
 .plan-figure {
@@ -927,15 +906,34 @@ h2 em {
   width: 100%;
   height: auto;
   background: white;
+  border: 1px solid var(--line);
+}
+
+.plan-story-list {
+  display: grid;
+  gap: 1.25rem;
+  min-width: 0;
 }
 
 .space-features {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.75rem;
+  gap: 0.85rem 2rem;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+@media (min-width: 700px) {
+  .space-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .space-features {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .space-features li {
@@ -944,7 +942,7 @@ h2 em {
   gap: 0.65rem;
   align-items: start;
   color: var(--ink);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   line-height: 1.4;
 }
 
@@ -959,13 +957,6 @@ h2 em {
   color: rgba(32, 55, 67, 0.58);
   font-size: 0.82rem;
   line-height: 1.45;
-}
-
-@media (min-width: 1100px) {
-  .space-features {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.85rem 1.5rem;
-  }
 }
 
 .section-heading {
@@ -1214,20 +1205,47 @@ h2 em {
   padding: clamp(1.5rem, 2.5vw, 2.5rem);
   color: var(--ink);
   border: 1px solid var(--line);
+  background: rgba(250, 248, 243, 0.55);
+  cursor: pointer;
+  outline: none;
+  transition:
+    transform 220ms ease,
+    background 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    box-shadow 220ms ease;
 }
 
-.tariff.featured {
+.tariff:hover {
+  border-color: rgba(32, 55, 67, 0.42);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(32, 55, 67, 0.08);
+}
+
+.tariff:focus-visible {
+  border-color: var(--ink);
+  box-shadow: 0 0 0 2px rgba(32, 55, 67, 0.18);
+}
+
+.tariff.is-selected {
   color: white;
   background: var(--ink);
+  border-color: var(--ink);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 34px rgba(32, 55, 67, 0.16);
+}
+
+.tariff.is-selected:hover {
   border-color: var(--ink);
 }
 
 .tariff-eyebrow {
   margin: 0 0 3.5rem;
   color: rgba(32, 55, 67, 0.55);
+  transition: color 220ms ease;
 }
 
-.featured .tariff-eyebrow {
+.tariff.is-selected .tariff-eyebrow {
   color: rgba(255, 255, 255, 0.55);
 }
 
@@ -1243,9 +1261,10 @@ h2 em {
   margin: 1rem 0 2rem;
   color: rgba(32, 55, 67, 0.67);
   line-height: 1.5;
+  transition: color 220ms ease;
 }
 
-.featured .tariff-description {
+.tariff.is-selected .tariff-description {
   color: rgba(255, 255, 255, 0.65);
 }
 
@@ -1290,6 +1309,11 @@ h2 em {
   padding-top: 1.25rem;
   border-top: 1px solid currentColor;
   font-size: 0.75rem;
+  transition: opacity 160ms ease;
+}
+
+.tariff a:hover {
+  opacity: 0.7;
 }
 
 .gallery-section {
@@ -1366,66 +1390,142 @@ h2 em {
   aspect-ratio: 3 / 4;
 }
 
-.review-grid {
+.tariffs-section {
+  background: var(--milk);
+}
+
+.reviews-section {
+  background: #e8e1d4;
+}
+
+.review-slider {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  border-top: 1px solid var(--line);
+  gap: 1.5rem;
 }
 
-.review {
+.review-slider-frame {
+  display: grid;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.review-slider-frame:active {
+  cursor: grabbing;
+}
+
+.reviews-heading {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.reviews-heading h2 {
+  grid-column: 1;
+}
+
+.review-slider-slide {
+  grid-area: 1 / 1;
   display: flex;
-  min-height: 26rem;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2.5rem;
   margin: 0;
-  padding: 1.75rem 3rem 0 0;
-  border-right: 1px solid var(--line);
+  padding: clamp(2rem, 4.5vw, 3.25rem) 0;
+  min-height: clamp(16rem, 30vw, 22rem);
+  text-align: left;
+  opacity: 0;
+  transition: opacity 450ms ease;
+  pointer-events: none;
+  visibility: hidden;
 }
 
-.review + .review {
-  padding-right: 0;
-  padding-left: 3rem;
-  border: 0;
+.review-slider-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
 }
 
-.review > span {
-  align-self: flex-start;
-  padding: 0.4rem 0.6rem;
-  color: rgba(32, 55, 67, 0.6);
-  border: 1px solid var(--line);
-  border-radius: 2rem;
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.58rem;
-  text-transform: uppercase;
-}
-
-.review blockquote {
-  max-width: 24ch;
-  margin: auto 0;
+.review-slider-slide blockquote {
+  max-width: 36rem;
+  width: min(100%, 36rem);
+  margin: 0;
   font-family: Georgia, serif;
-  font-size: clamp(1.45rem, 2.3vw, 2.35rem);
+  font-size: clamp(1.45rem, 2.6vw, 2.35rem);
   line-height: 1.28;
+  letter-spacing: -0.03em;
 }
 
-.review figcaption {
+.review-slider-slide figcaption {
   display: flex;
   flex-direction: column;
-  padding-top: 1.2rem;
-  border-top: 1px solid var(--line);
+  align-items: flex-end;
+  gap: 0.35rem;
+  margin-left: auto;
+  text-align: right;
 }
 
-.review figcaption strong {
-  font-size: 0.8rem;
+.review-slider-slide figcaption strong {
+  font-size: 0.88rem;
 }
 
-.review figcaption small {
-  margin-top: 0.3rem;
+.review-slider-slide figcaption small {
   color: rgba(32, 55, 67, 0.57);
+  font-size: 0.78rem;
+}
+
+.review-slider-toolbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.review-slider-nav {
+  display: grid;
+  width: 2.6rem;
+  height: 2.6rem;
+  place-items: center;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: background 160ms ease;
+}
+
+.review-slider-nav:hover {
+  background: rgba(32, 55, 67, 0.06);
+}
+
+.review-slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.55rem;
+}
+
+.review-slider-dots button {
+  width: 0.55rem;
+  height: 0.55rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(32, 55, 67, 0.22);
+  cursor: pointer;
+}
+
+.review-slider-dots button.is-active {
+  background: var(--ink);
 }
 
 .contact-section {
   padding-bottom: 0;
   color: var(--ink);
   background: var(--paper);
+  border-top: 1px solid var(--line);
 }
 
 .contact-head {
@@ -1638,10 +1738,6 @@ h2 em {
     min-height: 23rem;
   }
 
-  .plan-figure {
-    max-width: 28rem;
-  }
-
   .services-layout {
     grid-template-columns: 1fr;
   }
@@ -1697,10 +1793,6 @@ h2 em {
 
   .site-header {
     padding-block: 1rem;
-  }
-
-  .header-cta {
-    font-size: 0.68rem;
   }
 
   h1 {
@@ -1818,16 +1910,13 @@ h2 em {
     scroll-snap-align: start;
   }
 
-  .review-grid {
-    grid-template-columns: 1fr;
+  .review-slider-slide {
+    min-height: 15rem;
   }
 
-  .review,
-  .review + .review {
-    min-height: 22rem;
-    padding: 1.5rem 0;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
+  .review-slider-slide blockquote {
+    max-width: none;
+    width: 100%;
   }
 
   .contact-layout {
