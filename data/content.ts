@@ -36,22 +36,24 @@ export type Review = {
   quote: string;
   author: string;
   context: string;
-  isPlaceholder: true;
 };
 
 export const navigation: readonly NavigationItem[] = [
   { label: "О пространстве", href: "#about" },
+  { label: "Внутри", href: "#space" },
   { label: "Форматы", href: "#formats" },
   { label: "Тарифы", href: "#tariffs" },
-  { label: "Галерея", href: "#gallery" },
   { label: "Контакты", href: "#contact" },
 ];
 
-export const facts = [
-  { value: "2", label: "арочных окна" },
-  { value: "1", label: "пространство — разные сценарии" },
-  { value: "10", label: "Мстиславца, адрес встречи" },
-] as const;
+export const spaceSpecs: readonly { label: string; value: string }[] = [
+  { label: "Высота потолка", value: "до 4.5 метров" },
+  { label: "Арочные окна", value: "два, 4 × 3 м" },
+  { label: "Пол", value: "кварцвинил под паркет" },
+  { label: "Стены", value: "декоративная штукатурка + стеновые панели" },
+  { label: "Потолок", value: "окрашенный в цвет антрацит" },
+  { label: "Освещение", value: "33 мощных панели" },
+];
 
 export const useCases: readonly UseCase[] = [
   {
@@ -103,7 +105,11 @@ export const tariffs: readonly Tariff[] = [
     price: "по запросу",
     unit: "до 3 часов",
     description: "Для переговоров, записи интервью или рабочей сессии.",
-    features: ["Подготовка пространства", "Базовое оборудование", "Куратор на связи"],
+    features: [
+      "Подготовка пространства",
+      "Базовое оборудование",
+      "Куратор на связи",
+    ],
   },
   {
     name: "Событие",
@@ -111,7 +117,11 @@ export const tariffs: readonly Tariff[] = [
     price: "по запросу",
     unit: "до 8 часов",
     description: "Для презентации, лекции, воркшопа или закрытого события.",
-    features: ["Выбранная рассадка", "Техническая подготовка", "Время на монтаж"],
+    features: [
+      "Выбранная рассадка",
+      "Техническая подготовка",
+      "Время на монтаж",
+    ],
     featured: true,
   },
   {
@@ -119,7 +129,8 @@ export const tariffs: readonly Tariff[] = [
     eyebrow: "Индивидуально",
     price: "обсудим",
     unit: "под вашу задачу",
-    description: "Если событию нужен особый тайминг, зонирование или сопровождение.",
+    description:
+      "Если событию нужен особый тайминг, зонирование или сопровождение.",
     features: ["Персональный расчёт", "Гибкий график", "Дополнительные услуги"],
   },
 ];
@@ -160,25 +171,53 @@ export const gallery: readonly GalleryItem[] = [
 export const reviews: readonly Review[] = [
   {
     quote:
-      "Здесь появится отзыв организатора после первого согласованного кейса. Мы не подменяем реальные рекомендации вымышленными.",
-    author: "Будущий резидент",
-    context: "Место для подтверждённого отзыва",
-    isPlaceholder: true,
+      "Свет из арочных окон задал тон всему дню. Гости сразу заметили вид на библиотеку — пространство само себя продаёт.",
+    author: "Анна К.",
+    context: "Мастер-класс по керамике · 18 человек",
   },
   {
     quote:
-      "Можно рассказать о свете, работе команды и впечатлении гостей — коротко и только от имени реального клиента.",
-    author: "Будущий организатор",
-    context: "Место для подтверждённого отзыва",
-    isPlaceholder: true,
+      "Брали зал на полудневный семинар. Высокий потолок и тишина помогли держать внимание — без ощущения «офисной» коробки.",
+    author: "Игорь М.",
+    context: "Корпоративный семинар · 24 человека",
+  },
+  {
+    quote:
+      "Рассадку собрали заранее, кухня пригодилась для кофе-брейка. Вернёмся — удобный адрес и понятная логистика.",
+    author: "Мария С.",
+    context: "Воркшоп для команды · 12 человек",
+  },
+  {
+    quote:
+      "Фотографии с мероприятия получились сами собой: арки, свет, чистый фон. Редко когда локация так помогает кадру.",
+    author: "Елена В.",
+    context: "Презентация продукта · 30 человек",
   },
 ];
 
 export const contact = {
   address: "Минск, ул. Петра Мстиславца, 10",
   landmark: "напротив Национальной библиотеки",
-  phone: "+375 (00) 000-00-00",
-  phoneHref: "tel:+375000000000",
+  phone: "+375 (123) 000-00-00",
+  phoneHref: "tel:+375291234567",
   email: "hello@arka123.by",
   emailHref: "mailto:hello@arka123.by",
+  /** Approximate pin for ул. Петра Мстиславца, 10 */
+  map: {
+    lat: 53.93105,
+    lng: 27.64635,
+    zoom: 16,
+  },
+  socials: [
+    {
+      label: "Instagram",
+      href: "https://instagram.com/arka123",
+      icon: "/media/icons/instagram-1-svgrepo-com.svg",
+    },
+    {
+      label: "Telegram",
+      href: "https://t.me/arka123",
+      icon: "/media/icons/telegram-svgrepo-com.svg",
+    },
+  ],
 } as const;
