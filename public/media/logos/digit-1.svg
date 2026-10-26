@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+  width="1360" height="560" viewBox="200 160 1360 560"
+  preserveAspectRatio="xMidYMid meet">
+  <!-- Digit 1 is taller than 2/3; stem meets the arch baseline -->
+  <path fill="#000" d="M290 386H355V646H320V408H290Z"/>
+</svg>

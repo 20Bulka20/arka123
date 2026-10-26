@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+  width="1360" height="560" viewBox="200 160 1360 560"
+  preserveAspectRatio="xMidYMid meet">
+  <!-- Arch ring only — same contour the glow stroke follows -->
+  <path fill="none" stroke="#000" stroke-width="34" stroke-linejoin="miter"
+    stroke-linecap="square"
+    d="M252 655V395C252 305 332 230 436 230S620 305 620 395V655H300"/>
+</svg>
