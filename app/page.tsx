@@ -1,10 +1,9 @@
 import Image from "next/image";
 import { AnimatedLogo, LogoPreloader } from "@/components/brand/AnimatedLogo";
 import { ScrollFilm } from "@/components/hero/ScrollFilm";
-import { SpaceExperience } from "@/components/space/SpaceExperience";
+import { SpaceSlider } from "@/components/space/SpaceSlider";
 import {
   contact,
-  gallery,
   navigation,
   reviews,
   services,
@@ -98,12 +97,9 @@ export default function Home() {
                 <br />
                 <em>изнутри</em>
               </h2>
-              <p>
-                Обход по реальным ракурсам зала: окна, торец и кухонная зона.
-                Переключайте сценарии рассадки поверх исходной архитектуры.
-              </p>
+              <p>Реальные ракурсы пространства.</p>
             </div>
-            <SpaceExperience />
+            <SpaceSlider />
           </div>
         </section>
 
@@ -207,55 +203,12 @@ export default function Home() {
         </section>
 
         <section
-          className="gallery-section section"
-          id="gallery"
-          aria-labelledby="gallery-title"
-        >
-          <div className="shell">
-            <div className="section-heading inverse split-heading">
-              <div>
-                <div className="section-index">06 / Галерея</div>
-                <h2 id="gallery-title">
-                  Свет.
-                  <br />
-                  <em>Арки. Город.</em>
-                </h2>
-              </div>
-              <p>Реальные кадры пространства и маршрута к нему.</p>
-            </div>
-            <div className="gallery-grid">
-              {gallery.map((item, index) => (
-                <figure
-                  className={`gallery-item gallery-${index + 1} ${item.orientation}`}
-                  key={item.slug}
-                >
-                  <Image
-                    src={`/media/photos/${item.slug}-${item.width}.avif`}
-                    alt={item.alt}
-                    fill
-                    sizes={
-                      item.orientation === "landscape"
-                        ? "(max-width: 768px) 100vw, 66vw"
-                        : "(max-width: 768px) 100vw, 34vw"
-                    }
-                  />
-                  <figcaption>
-                    <span>0{index + 1}</span>
-                    {item.alt}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section
           className="section shell"
           id="reviews"
           aria-labelledby="reviews-title"
         >
           <div className="section-heading">
-            <div className="section-index">07 / Отзывы</div>
+            <div className="section-index">06 / Отзывы</div>
             <h2 id="reviews-title">
               Здесь говорят
               <br />

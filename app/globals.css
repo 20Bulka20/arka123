@@ -426,7 +426,6 @@ input {
 
 .hero-media img,
 .contact-media img,
-.space-stage img,
 .gallery-item img {
   object-fit: cover;
 }
@@ -811,13 +810,42 @@ h2 em {
   position: relative;
   width: 100%;
   aspect-ratio: 3 / 4;
-  overflow: visible;
+  overflow: hidden;
   background: transparent;
+}
+
+.intro-curator-media::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      var(--paper) 0%,
+      rgba(250, 248, 243, 0.92) 8%,
+      rgba(250, 248, 243, 0.4) 22%,
+      transparent 40%
+    ),
+    linear-gradient(
+      to left,
+      var(--paper) 0%,
+      rgba(250, 248, 243, 0.88) 6%,
+      rgba(250, 248, 243, 0.35) 20%,
+      transparent 36%
+    );
+  content: "";
+  pointer-events: none;
 }
 
 .intro-curator-media img {
   object-fit: contain;
   object-position: center bottom;
+  -webkit-mask-image: linear-gradient(
+      to top left,
+      transparent 0%,
+      #000 42%
+    );
+  mask-image: linear-gradient(to top left, transparent 0%, #000 42%);
 }
 
 .facts {
@@ -857,8 +885,7 @@ h2 em {
   line-height: 1.4;
 }
 
-.space-section,
-.gallery-section {
+.space-section {
   overflow: hidden;
   color: white;
   background: var(--ink);
@@ -892,246 +919,88 @@ h2 em {
   color: #bdb5aa;
 }
 
-.space-stage {
+.space-slider {
+  display: grid;
+  gap: 1rem;
+}
+
+.space-slider-frame {
   position: relative;
-  aspect-ratio: 16 / 8.2;
+  width: 100%;
+  /* Fixed frame so landscape/portrait swaps don't jump the layout */
+  aspect-ratio: 16 / 10;
+  max-height: min(72vh, 44rem);
   overflow: hidden;
   color: white;
   background: #102731;
   cursor: grab;
-  isolation: isolate;
   touch-action: pan-y;
   user-select: none;
+  margin-inline: auto;
 }
 
-.space-stage:active {
+.space-slider-frame:active {
   cursor: grabbing;
 }
 
-.space-plates,
-.space-plate,
-.space-layout-layer,
-.space-layout {
+.space-slider-slide {
   position: absolute;
   inset: 0;
-}
-
-.space-plate {
   opacity: 0;
-  transition: opacity 700ms cubic-bezier(0.22, 0.8, 0.24, 1);
+  transition: opacity 550ms ease;
   pointer-events: none;
 }
 
-.space-plate.is-active {
+.space-slider-slide.is-active {
   opacity: 1;
 }
 
-.space-plate img {
-  object-fit: cover;
+.space-slider-slide img {
+  object-fit: contain;
   object-position: center;
-  transform: translateX(var(--space-pan, 0%)) scale(1.08);
-  transition: transform 420ms cubic-bezier(0.22, 0.8, 0.24, 1);
 }
 
-.space-stage--portrait .space-plate.is-active img {
-  object-position: 50% 40%;
-}
-
-.space-layout-layer {
-  z-index: 2;
-  pointer-events: none;
-  animation: layout-enter 500ms ease both;
-}
-
-.space-layout {
-  width: 100%;
-  height: 100%;
-}
-
-.space-stage-ui,
-.space-nav,
-.space-caption {
-  position: absolute;
-  z-index: 4;
-  pointer-events: none;
-}
-
-.space-stage-ui,
-.space-nav button,
-.space-caption {
-  pointer-events: auto;
-}
-
-.space-stage-ui {
-  top: 1rem;
-  right: 1rem;
-  left: 1rem;
-  display: flex;
+.space-slider-toolbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  gap: 1rem;
 }
 
-.space-stage-ui button,
-.space-nav button {
-  padding: 0.55rem 0.7rem;
-  color: inherit;
-  border: 1px solid var(--white-line);
-  background: rgba(20, 42, 53, 0.38);
-  backdrop-filter: blur(8px);
-  cursor: pointer;
-}
-
-.space-nav {
-  top: 50%;
-  right: 1rem;
-  left: 1rem;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-}
-
-.space-nav button {
+.space-slider-nav {
+  display: grid;
   width: 2.6rem;
   height: 2.6rem;
-  border-radius: 50%;
-  font-size: 1rem;
-}
-
-.status-dot {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.status-dot::before {
-  width: 0.4rem;
-  height: 0.4rem;
-  border-radius: 50%;
-  background: white;
-  content: "";
-}
-
-.space-caption {
-  right: 1rem;
-  bottom: 1rem;
-  left: 1rem;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 1rem;
-  text-shadow: 0 1px 1rem rgba(8, 22, 29, 0.85);
-}
-
-.space-caption > div {
-  display: grid;
-  gap: 0.35rem;
-}
-
-.space-caption strong {
-  font-family: Georgia, serif;
-  font-size: clamp(1.3rem, 2.2vw, 2.4rem);
-  font-weight: 400;
-}
-
-.space-caption span {
-  max-width: 24rem;
-  font-size: 0.7rem;
-  line-height: 1.4;
-}
-
-.space-mode-chip {
-  margin: 0;
-  padding: 0.45rem 0.65rem;
-  border: 1px solid var(--white-line);
-  background: rgba(20, 42, 53, 0.42);
-  backdrop-filter: blur(8px);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-@keyframes layout-enter {
-  from {
-    opacity: 0;
-    transform: translateY(0.6rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.space-controls {
-  display: grid;
-  gap: 0.75rem;
-  margin-top: 1rem;
-}
-
-.viewpoint-list,
-.mode-list {
-  display: grid;
-  gap: 0;
-}
-
-.viewpoint-list {
-  grid-template-columns: repeat(5, 1fr);
-  border-bottom: 1px solid var(--white-line);
-}
-
-.mode-list {
-  grid-template-columns: repeat(3, 1fr);
-  counter-reset: mode;
-}
-
-.viewpoint-list button,
-.mode-list button {
-  position: relative;
-  width: 100%;
-  padding: 1.1rem 0.75rem 1.1rem 0;
-  color: rgba(255, 255, 255, 0.48);
-  border: 0;
-  border-bottom: 1px solid transparent;
-  background: transparent;
-  cursor: pointer;
-  font-size: 0.72rem;
-  text-align: left;
-  transition:
-    color 180ms ease,
-    border-color 180ms ease;
-}
-
-.mode-list button {
-  padding-left: 1.75rem;
-}
-
-.mode-list button::before {
-  position: absolute;
-  left: 0;
-  content: "0" counter(mode);
-  counter-increment: mode;
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.58rem;
-}
-
-.viewpoint-list .active,
-.mode-list .active {
-  border-color: white;
+  place-items: center;
   color: white;
+  border: 1px solid var(--white-line);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
 }
 
-.space-disclaimer {
-  max-width: 40rem;
-  margin: 1rem 0 0 auto;
-  color: rgba(255, 255, 255, 0.48);
-  font-size: 0.65rem;
-  line-height: 1.5;
-  text-align: right;
+.space-slider-nav:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.space-slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.55rem;
+}
+
+.space-slider-dots button {
+  width: 0.55rem;
+  height: 0.55rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+  cursor: pointer;
+}
+
+.space-slider-dots button.is-active {
+  background: white;
 }
 
 .use-case-grid {
@@ -1813,37 +1682,9 @@ h2 em {
     font-size: 3.7rem;
   }
 
-  .space-stage {
-    aspect-ratio: 3 / 4;
-  }
-
-  .space-plate img {
-    object-position: 58% center;
-  }
-
-  .viewpoint-list,
-  .mode-list {
-    display: flex;
-    overflow-x: auto;
-  }
-
-  .viewpoint-list button,
-  .mode-list button {
-    flex: 0 0 auto;
-    min-width: 10.5rem;
-  }
-
-  .space-caption {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .space-nav {
-    display: none;
-  }
-
-  .space-disclaimer {
-    text-align: left;
+  .space-slider-frame {
+    aspect-ratio: 4 / 5;
+    max-height: min(70vh, 36rem);
   }
 
   .use-case-grid {
@@ -1937,17 +1778,8 @@ h2 em {
     animation: none;
   }
 
-  .space-plate {
+  .space-slider-slide {
     transition: none;
-  }
-
-  .space-plate img {
-    transform: none;
-    transition: none;
-  }
-
-  .space-layout-layer {
-    animation: none;
   }
 
   .scroll-film {

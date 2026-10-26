@@ -41,9 +41,9 @@ export type Review = {
 
 export const navigation: readonly NavigationItem[] = [
   { label: "О пространстве", href: "#about" },
+  { label: "Внутри", href: "#space" },
   { label: "Форматы", href: "#formats" },
   { label: "Тарифы", href: "#tariffs" },
-  { label: "Галерея", href: "#gallery" },
   { label: "Контакты", href: "#contact" },
 ];
 
