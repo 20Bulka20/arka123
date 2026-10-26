@@ -1,13 +1,9 @@
 import Image from "next/image";
-import {
-  AnimatedLogo,
-  LogoPreloader,
-} from "@/components/brand/AnimatedLogo";
+import { AnimatedLogo, LogoPreloader } from "@/components/brand/AnimatedLogo";
 import { ScrollFilm } from "@/components/hero/ScrollFilm";
 import { SpaceExperience } from "@/components/space/SpaceExperience";
 import {
   contact,
-  facts,
   gallery,
   navigation,
   reviews,
@@ -46,82 +42,57 @@ export default function Home() {
       <main id="top">
         <ScrollFilm />
 
-        <section className="section intro shell" id="about" aria-labelledby="about-title">
+        <section
+          className="section intro shell"
+          id="about"
+          aria-labelledby="about-title"
+        >
           <div className="section-index">01 / О пространстве</div>
-          <div className="intro-copy">
-            <h2 id="about-title">
-              Архитектура задаёт
-              <br />
-              <em>другой ритм</em> встречи
-            </h2>
-            <p className="lead">
-              АРКА 123 — лаконичный зал с естественным светом, характерными
-              окнами и видом на город. Чистая основа, которую легко настроить
-              под вашу задачу.
-            </p>
-          </div>
-          <div className="facts" aria-label="Кратко о пространстве">
-            {facts.map((fact) => (
-              <div className="fact" key={fact.label}>
-                <strong>{fact.value}</strong>
-                <span>{fact.label}</span>
+          <div className="intro-stage">
+            <div className="intro-window">
+              <Image
+                src="/media/photos/window-view-896.webp"
+                alt="Вид на Национальную библиотеку через арочное окно"
+                fill
+                sizes="(max-width: 900px) 100vw, 1480px"
+                priority
+              />
+            </div>
+            <div className="intro-copy">
+              <h2 id="about-title">
+                Архитектура задаёт
+                <br />
+                <em>другой ритм</em>
+                <br />
+                встречи
+              </h2>
+              <p className="lead">
+                АРКА 123 — лаконичный зал с естественным светом, характерными
+                окнами и видом на город. Чистая основа, которую легко настроить
+                под вашу задачу.
+              </p>
+            </div>
+            <figure className="intro-curator">
+              <div className="intro-curator-media">
+                <Image
+                  src="/media/woman/host-without-bg-960.webp"
+                  alt="Куратор пространства АРКА 123"
+                  fill
+                  sizes="(max-width: 900px) 0px, 22rem"
+                />
               </div>
-            ))}
+            </figure>
           </div>
         </section>
 
         <section
-          className="host-section section"
-          id="host"
-          aria-labelledby="host-title"
+          className="space-section section"
+          id="space"
+          aria-labelledby="space-title"
         >
-          <div className="shell host-layout">
-            <div className="host-media">
-              <Image
-                src="/media/woman/host-full-960.avif"
-                alt="Фирменная героиня АРКА 123 в графитовом костюме"
-                fill
-                sizes="(max-width: 768px) 100vw, 48vw"
-              />
-              <div className="host-portrait" aria-hidden="true">
-                <Image
-                  src="/media/woman/host-portrait-960.avif"
-                  alt=""
-                  fill
-                  sizes="(max-width: 768px) 38vw, 16vw"
-                />
-              </div>
-              <span className="host-mark">123</span>
-            </div>
-
-            <div className="host-copy">
-              <div className="section-index">02 / Герой пространства</div>
-              <p className="eyebrow">Хозяйка АРКА 123</p>
-              <h2 id="host-title">
-                Встречает.
-                <br />
-                <em>Показывает. Помогает.</em>
-              </h2>
-              <p className="lead">
-                Фирменная героиня — спокойный куратор пространства. Она
-                знакомит гостей с залом, помогает выбрать формат и делает
-                строгий архитектурный образ бренда человечнее.
-              </p>
-              <div className="host-detail">
-                <span>Фирменная деталь</span>
-                <p>
-                  Брошь повторяет знак арочного окна и связывает персонажа с
-                  айдентикой АРКА 123.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="space-section section" id="space" aria-labelledby="space-title">
           <div className="shell">
             <div className="section-heading inverse">
-              <div className="section-index">03 / Внутри</div>
+              <div className="section-index">02 / Внутри</div>
               <h2 id="space-title">
                 Посмотрите на зал
                 <br />
@@ -136,9 +107,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section shell" id="formats" aria-labelledby="formats-title">
+        <section
+          className="section shell"
+          id="formats"
+          aria-labelledby="formats-title"
+        >
           <div className="section-heading">
-            <div className="section-index">04 / Форматы</div>
+            <div className="section-index">03 / Форматы</div>
             <h2 id="formats-title">
               Один зал.
               <br />
@@ -162,7 +137,7 @@ export default function Home() {
         <section className="services section" aria-labelledby="services-title">
           <div className="shell services-layout">
             <div className="services-title">
-              <div className="section-index">05 / Всё готово</div>
+              <div className="section-index">04 / Всё готово</div>
               <h2 id="services-title">
                 Внимание
                 <br />
@@ -185,10 +160,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section shell" id="tariffs" aria-labelledby="tariffs-title">
+        <section
+          className="section shell"
+          id="tariffs"
+          aria-labelledby="tariffs-title"
+        >
           <div className="section-heading split-heading">
             <div>
-              <div className="section-index">06 / Тарифы</div>
+              <div className="section-index">05 / Тарифы</div>
               <h2 id="tariffs-title">
                 Выберите
                 <br />
@@ -202,7 +181,10 @@ export default function Home() {
           </div>
           <div className="tariff-grid">
             {tariffs.map((tariff) => (
-              <article className={`tariff ${tariff.featured ? "featured" : ""}`} key={tariff.name}>
+              <article
+                className={`tariff ${tariff.featured ? "featured" : ""}`}
+                key={tariff.name}
+              >
                 <p className="tariff-eyebrow">{tariff.eyebrow}</p>
                 <h3>{tariff.name}</h3>
                 <p className="tariff-description">{tariff.description}</p>
@@ -224,11 +206,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="gallery-section section" id="gallery" aria-labelledby="gallery-title">
+        <section
+          className="gallery-section section"
+          id="gallery"
+          aria-labelledby="gallery-title"
+        >
           <div className="shell">
             <div className="section-heading inverse split-heading">
               <div>
-                <div className="section-index">07 / Галерея</div>
+                <div className="section-index">06 / Галерея</div>
                 <h2 id="gallery-title">
                   Свет.
                   <br />
@@ -263,9 +249,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section shell" id="reviews" aria-labelledby="reviews-title">
+        <section
+          className="section shell"
+          id="reviews"
+          aria-labelledby="reviews-title"
+        >
           <div className="section-heading">
-            <div className="section-index">08 / Отзывы</div>
+            <div className="section-index">07 / Отзывы</div>
             <h2 id="reviews-title">
               Здесь говорят
               <br />
@@ -286,7 +276,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="contact-section" id="contact" aria-labelledby="contact-title">
+        <section
+          className="contact-section"
+          id="contact"
+          aria-labelledby="contact-title"
+        >
           <div className="contact-media">
             <Image
               src="/media/photos/library-and-building-1672.avif"
@@ -303,24 +297,35 @@ export default function Home() {
               <em>в АРКА 123?</em>
             </h2>
             <p>
-              Расскажите о событии — уточним свободное время и подготовим
-              расчёт под ваш сценарий.
+              Расскажите о событии — уточним свободное время и подготовим расчёт
+              под ваш сценарий.
             </p>
             <form className="contact-form">
               <label>
                 <span>Имя</span>
-                <input name="name" type="text" placeholder="Как к вам обращаться?" />
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="Как к вам обращаться?"
+                />
               </label>
               <label>
                 <span>Телефон или почта</span>
-                <input name="contact" type="text" placeholder="+375 или email" />
+                <input
+                  name="contact"
+                  type="text"
+                  placeholder="+375 или email"
+                />
               </label>
               <button type="button">
                 Оставить заявку
                 <ArrowIcon />
               </button>
             </form>
-            <small>Демо-форма: отправка будет подключена после согласования контактов.</small>
+            <small>
+              Демо-форма: отправка будет подключена после согласования
+              контактов.
+            </small>
           </div>
         </section>
       </main>
