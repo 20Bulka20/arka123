@@ -20,6 +20,32 @@
 # production
 /build
 /media/originals/
+
+# Deploy only the media files referenced by the site/cover.
+# Keep the rest locally for prepare:media / future use.
+/public/media/**
+!/public/media/icons/
+!/public/media/icons/instagram-1-svgrepo-com.svg
+!/public/media/icons/telegram-svgrepo-com.svg
+!/public/media/logos/
+!/public/media/logos/1.svg
+!/public/media/logos/arch-mask.svg
+!/public/media/logos/digit-1.svg
+!/public/media/photos/
+!/public/media/photos/facade-promenade-1672.webp
+!/public/media/photos/hall-back-wall-941.webp
+!/public/media/photos/hall-windows-wide-1672.webp
+!/public/media/photos/kitchenette-941.webp
+!/public/media/photos/mock-plan-1536.webp
+!/public/media/photos/window-library-941.webp
+!/public/media/photos/window-plaza-941.webp
+!/public/media/photos/window-view-896.webp
+!/public/media/woman/
+!/public/media/woman/host-without-bg-960.webp
+!/public/media/woman/lookbook-sheet.webp
+!/public/media/woman/woman-greet-2k.mp4
+!/public/media/woman/woman-greet-poster.webp
+
 # misc
 .DS_Store
 **/.DS_Store
